@@ -14,4 +14,8 @@ Curso de introdução à computação da EMAp-FGV
    1. [History of UNIX](https://www.youtube.com/watch?v=tc4ROCJYbm0&t=3s) (Opcional)
    2. [Revolution OS](https://www.youtube.com/watch?v=k0RYQVkQmWU)
 5. Redes e Internet
-6. 
+   1. [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) e [UDP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) e IP os protocolos da Internet.
+   2. [FTP](https://en.wikipedia.org/wiki/File_Transfer_Protocol) - Protocolo de transferência de arquivos.
+   3. [Bluetooth](https://en.wikipedia.org/wiki/Bluetooth)
+   4. [SSH](https://en.wikipedia.org/wiki/Secure_Shell) - Secure Shell Protocol.
+   5. Redes [P2P](https://en.wikipedia.org/wiki/Peer-to-peer) arquivos distribuídos.
