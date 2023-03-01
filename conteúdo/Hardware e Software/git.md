@@ -4,7 +4,7 @@ Atualizando o editor padrão do Git bash (para usuários Windows):
 git config --global core.editor "nano.exe"
 ```
 
-- [Tutorial de Git](https://git-scm.com/book/pt-br/v1/Primeiros-passos-No%C3%A7%C3%B5es-B%C3%A1sicas-de-Git)
+- [Tutorial de Git](https://git-scm.com/book/pt-br/v2)
 - [Ambiente Interativo](https://learngitbranching.js.org/)
 - [Texto introdutório sobre Git](https://www.dadosaleatorios.com.br/post/introdu%C3%A7%C3%A3o-ao-git/)  
 - [Outro guia rápido de GIT](http://rogerdudler.github.io/git-guide/index.pt_BR.html)  
