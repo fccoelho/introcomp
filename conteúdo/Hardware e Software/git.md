@@ -24,7 +24,13 @@ Existem várias outras configurações possíveis. Mas estas, por hora, são suf
 $ git config --list
 ```
 ## Começando um novo repositório
-A unidade de trabalho do `git` é o repositório, que é um diretório (árvore de diretórios) em seu sistema de arquivos, que contém o código a ser versionado.
+A unidade de trabalho do `git` é o repositório, que é um diretório (árvore de diretórios) em seu sistema de arquivos, que contém o código a ser versionado. Após criar o diretório podemos entrar nele e iniciar o nosso repositório:
+```bash
+$ cd meu_repo
+$ git init
+```
+
+Depois de inicializar o reposítório podemos criar Arquivos que irão ser versionados. O git pede que informemos a ele cada arquivo que desejamos que seja versionado, e fazemos isso com o comando `git add <arquivo>`.
 
 ## Link úteis
 - [Tutorial de Git](https://git-scm.com/book/pt-br/v2)
