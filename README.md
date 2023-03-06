@@ -26,5 +26,5 @@ Curso de introdução à computação da EMAp-FGV
 10. Fazendo Apresentações com LaTeX -  o pacote [Beamer](https://ctan.org/pkg/beamer)
 11. O terminal. Usando o terminal no [Linux](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) e no [Windows](https://learn.microsoft.com/en-us/windows/terminal/)
 12. [Linguagem Shell](https://pt.wikipedia.org/wiki/Shell_script) - introdução à programação usando shell no Linux.
-13. Introdução à programação com Python.
+13. Introdução à programação em Python.
 14. Introdução à Computação Científica.
