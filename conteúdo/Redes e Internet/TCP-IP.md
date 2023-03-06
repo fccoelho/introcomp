@@ -41,3 +41,17 @@ Originalmente os endereços eram divididos em blocos denominados [classes](https
 Ela consiste de um endereço IP seguido de uma "/" e um número decimal. Este número decimal representa o número de bits "1" no início do endereço. Logo, 198.51.100.0/24 corresponte à seguinte máscara de subrede: 255.255.255.0 ou os endereços de 198.51.100.0 a 198.51.100.255
 
 Para calcular quantos endereços estão disponíveis sob uma certa máscara basta usar a seguinte fórmula 2^(comp.do endereço-comp do prefixo). Existem [calculadoras online](https://mxtoolbox.com/subnetcalculator.aspx), que dão mais informações.
+
+## Redes Privadas e NAT
+Redes privadas não precisam ter endereços que sejam globalmente únicos. Então podem usar livremente todo o espaço de  endereçamento do IPv4 ou 6. Porém para comunicar-se com endereços da internet, precisam fazê-lo através de um protocolo denominado ["network address translation"](https://en.wikipedia.org/wiki/Network_address_translation)(NAT).
+
+### NAT
+![NAT](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/NAT_Concept-en.svg/1024px-NAT_Concept-en.svg.png)
+A tradução de endereços entre a LAN (rede local) e a WAN (tipicamente a internet) se dá a nível de um [roteador](https://en.wikipedia.org/wiki/Router_(computing)).
+
+Todos os pacotes IP possuem um endereço de origem e outro de destino. Quando estes pacotes passam por um NAT, vindo de uma rede privada, o seu endereço de origem é alterado, e quando chegam a uma rede privada o seu endereço de destino é alterado. Normalmente um host externo, em um cenário de NAT simétrico, não consegue enviar pacotes para um host na rede interna, a menos que seja uma resposta ao uma comunicação iniciada pelo host interno, pois cada transmissão iniciada internamente cria uma uma regra de tradução de endereçõs no NAT.
+
+Quando 2 hosts em redes locais distintas querem se comunicar diretamente, estratégias de [travessia de NAT](https://en.wikipedia.org/wiki/TCP_hole_punching), precisam ser utilizadas, por exemplo para aplicações [P2P](https://en.wikipedia.org/wiki/Peer-to-peer).
+
+## Protocolo TCP
+O protocolo TCP diz respeito aos pacotes de dados a ser transmitidos entre dois computadores, Enquanto o pacote IP cuida do endereçamento, o TCP garante a integridade da comunicação anível dos bytes. O TCP prioriza a integridade dos dados sobre a velocidade de transmissão. Então aplicações que não requerem integridade absoluta, como o VOIP (telefonia IP) podem se utilizar de outros protocolos como o [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol), por exemplo.
