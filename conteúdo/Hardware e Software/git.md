@@ -32,6 +32,13 @@ $ git init
 
 Depois de inicializar o reposítório podemos criar Arquivos que irão ser versionados. O git pede que informemos a ele cada arquivo que desejamos que seja versionado, e fazemos isso com o comando `git add <arquivo>`.
 
+Após adicionar os arquivos podemos registrar nossa primeira modificação em nosso repositório.
+
+```bash
+$ git commit -a
+```
+
+
 ## Link úteis
 - [Tutorial de Git](https://git-scm.com/book/pt-br/v2)
 - [Ambiente Interativo](https://learngitbranching.js.org/)
