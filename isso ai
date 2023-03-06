@@ -1,0 +1,103 @@
+[33mcommit a05c4e7f032738347723d8e457b72a165de9189c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: SILLAS ROCHA DA COSTA <B51073@fgv.edu.br>
+Date:   Mon Mar 6 08:17:59 2023 -0300
+
+    Correção de Português
+
+[33mcommit 87cbc255619f0a661795199e8da5a12b62bc6b25[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Mar 2 13:46:06 2023 -0300
+
+    melhorei o conteúdo sobre git
+
+[33mcommit 1fa018da443928fbf270e73c882f4f0efdec5591[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Mar 2 12:45:09 2023 -0300
+
+    Adicionei mais instruções sobre o git
+
+[33mcommit f593b3bbd5a2763c9ed3f80714b2496f7ebe11e0[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Wed Mar 1 14:47:37 2023 -0300
+
+    Update git.md
+    
+    consertei link quebrado
+
+[33mcommit 9ead230374e35412a130ecb940980e95dc277e42[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Tue Feb 28 16:39:17 2023 -0300
+
+    Mais detalhes sobre o Yabasic
+
+[33mcommit dd5264ba0ad89923524244c8102ae43465720b53[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Tue Feb 28 16:23:10 2023 -0300
+
+    Adicionei conteúdo para git
+
+[33mcommit 9b0e2db2337e70d9b3d75b6dc886892abe080b9e[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Mon Feb 27 12:19:17 2023 -0300
+
+    adiconei material sobre o Linux
+
+[33mcommit 91d2628e221a214e0001685cf01c3b06d023e5d5[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Sun Feb 26 12:00:33 2023 -0300
+
+    Adicionei planos da primeira semana de aula
+
+[33mcommit 5491006158b45b39c538f8ce71bc63e03d6885c5[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Feb 23 10:10:30 2023 -0300
+
+    Adicionei mais conteúdo
+
+[33mcommit 7443bf76bdea5b68ac6160c5ac348c5cacc4d930[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Feb 23 09:10:20 2023 -0300
+
+    Comecei a descrição sobre Software
+
+[33mcommit 6318a357624f7b227c5ca754e0d2d296000b1064[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Feb 16 13:49:24 2023 -0300
+
+    início das notas de software
+
+[33mcommit 27cda833b2afd8cf4d797e186940a2274d371532[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Feb 16 13:40:44 2023 -0300
+
+    Adicionei notas sobre Hardware
+
+[33mcommit 6954238e376864fc5844270176bd601c43de01a0[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Jan 26 17:46:24 2023 -0300
+
+    Atualizei o README
+
+[33mcommit aa9b854c3ae8a4d3c3afa4c0c44bdcf04c58b37b[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Jan 26 17:43:28 2023 -0300
+
+    updated readme
+
+[33mcommit df65c7b0131e35abed676d84a8d53cbfffa4bdb2[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Fri Jan 20 09:17:06 2023 -0300
+
+    updated README
+
+[33mcommit c5031fb706091e16b0c0f8394c76ba4ef69f19f3[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Thu Jan 19 15:00:04 2023 -0300
+
+    updated readme
+
+[33mcommit 984401ff4461756f5c06269bf08d003f4c8a5482[m
+Author: Flávio Codeço Coelho <fccoelho@gmail.com>
+Date:   Wed Jan 11 13:46:01 2023 -0300
+
+    Initial commit
