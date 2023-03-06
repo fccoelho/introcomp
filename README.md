@@ -10,7 +10,7 @@ Curso de introdução à computação da EMAp-FGV
    2. [Who Invented the Computer?](https://www.youtube.com/watch?v=d1pvc9Zh7Tg)
 3. História do Software - Introdução à história do Software. Discussão deste documentário:
    1. [História do Software](https://www.youtube.com/watch?v=OdI7Ukf-Bf4)
-4. Sistemas Operationais - Introdução ao conceito do que é um sistema operacional. Discussão do documentário:
+4. Sistemas Operacionais - Introdução ao conceito do que é um sistema operacional. Discussão do documentário:
    1. [History of UNIX](https://www.youtube.com/watch?v=tc4ROCJYbm0&t=3s) (Opcional)
    2. [Revolution OS](https://www.youtube.com/watch?v=k0RYQVkQmWU)
 5. Redes e Internet
