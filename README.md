@@ -10,7 +10,7 @@ Curso de introdução à computação da EMAp-FGV
    2. [Who Invented the Computer?](https://www.youtube.com/watch?v=d1pvc9Zh7Tg)
 3. História do Software - Introdução à história do Software. Discussão deste documentário:
    1. [História do Software](https://www.youtube.com/watch?v=OdI7Ukf-Bf4)
-4. Sistemas Operationais - Introdução ao conceito do que é um sistema operacional. Discussão do documentário:
+4. Sistemas Operacionais - Introdução ao conceito do que é um sistema operacional. Discussão do documentário:
    1. [History of UNIX](https://www.youtube.com/watch?v=tc4ROCJYbm0&t=3s) (Opcional)
    2. [Revolution OS](https://www.youtube.com/watch?v=k0RYQVkQmWU)
 5. Redes e Internet
@@ -22,9 +22,9 @@ Curso de introdução à computação da EMAp-FGV
 6. Informação Analógica vs Digital - Conceitos básicos, princípios de [ADC](https://en.wikipedia.org/wiki/Analog-to-digital_converter) e [DAC](https://en.wikipedia.org/wiki/Digital-to-analog_converter)
 7. [Bases numéricas](https://www.trccompsci.online/mediawiki/index.php/Number_Systems_/_Number_Bases) - Bases numericas e seu papel na [computação](https://en.wikipedia.org/wiki/Computer_number_format).
 8. Linguagem de máquina e Assembly. Introdução conceitual ao que é linguagem de máquina e a linguagem assembly, com exemplos.
-9. LaTeX - introdução à edição de textos com LaTeX
+9. LaTeX - Introdução à edição de textos com LaTeX
 10. Fazendo Apresentações com LaTeX -  o pacote [Beamer](https://ctan.org/pkg/beamer)
 11. O terminal. Usando o terminal no [Linux](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) e no [Windows](https://learn.microsoft.com/en-us/windows/terminal/)
 12. [Linguagem Shell](https://pt.wikipedia.org/wiki/Shell_script) - introdução à programação usando shell no Linux.
-13. Introdução à programação com Python.
+13. Introdução à programação em Python.
 14. Introdução à Computação Científica.
