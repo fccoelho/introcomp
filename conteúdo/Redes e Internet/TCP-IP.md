@@ -57,6 +57,8 @@ Quando 2 hosts em redes locais distintas querem se comunicar diretamente, estrat
 O protocolo TCP diz respeito aos pacotes de dados a ser transmitidos entre dois computadores, Enquanto o pacote IP cuida do endereçamento, o TCP garante a integridade da comunicação anível dos bytes. O TCP prioriza a integridade dos dados sobre a velocidade de transmissão. Então aplicações que não requerem integridade absoluta, como o VOIP (telefonia IP) podem se utilizar de outros protocolos como o [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol), por exemplo.
 ![TCP](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Tcp_state_diagram_fixed_new.svg/1920px-Tcp_state_diagram_fixed_new.svg.png)
 
+Tanto o protocolo TCP quanto o UDP se utilizam de portas para identificar e trocar informaçẽs com aplicativos específicos em um host. As portas são identificadas por um número de 16 bits (0-65535) reservada pelo aplicativo envolvido na conexão TCPou UDP.
+
 ## Exercícios
 Embora o Protocolo TCP tenha sido desenhado para comunicar-se através da internet, podemos utilizá-lo para comunicação entre programas rodando na mesma máquina.
 
