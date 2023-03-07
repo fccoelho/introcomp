@@ -55,3 +55,62 @@ Quando 2 hosts em redes locais distintas querem se comunicar diretamente, estrat
 
 ## Protocolo TCP
 O protocolo TCP diz respeito aos pacotes de dados a ser transmitidos entre dois computadores, Enquanto o pacote IP cuida do endereçamento, o TCP garante a integridade da comunicação anível dos bytes. O TCP prioriza a integridade dos dados sobre a velocidade de transmissão. Então aplicações que não requerem integridade absoluta, como o VOIP (telefonia IP) podem se utilizar de outros protocolos como o [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol), por exemplo.
+![TCP](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Tcp_state_diagram_fixed_new.svg/1920px-Tcp_state_diagram_fixed_new.svg.png)
+
+## Exercícios
+Embora o Protocolo TCP tenha sido desenhado para comunicar-se através da internet, podemos utilizá-lo para comunicação entre programas rodando na mesma máquina.
+
+Vamos explorar este conceito usando a Linguagem Python. Não se procupe se você ainda não conhece a linguagem, vamos explicar o funcionamento do código.
+
+Vamos escrever dois programas um que vamos chamar de "servidor" e outro que será o "cliente".
+
+```python
+#!/usr/bin/env/python
+# servidor_de_eco.py
+
+import socket
+
+HOST = "127.0.0.1"  # endereço IP da máquina local
+PORT = 65432  # Porta em que vamos escutar (portas não privilegiadas > 1023).
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: # cria o Socket
+    s.bind((HOST, PORT)) # Conecta o socket ao host e porta
+    s.listen() # começa a escutar...
+    conn, addr = s.accept() # Aceita a conexão
+    with conn:
+        print(f"Connectado por {addr}")
+        while True:
+            data = conn.recv(1024) # Tenta receber dados
+            if not data:
+                break
+            conn.sendall(data) # Envia de volta os dados (eco)
+```
+
+Agora o código do Cliente:
+
+```python
+#!/usr/bin/env python
+# cliente_eco.py
+
+import socket
+
+HOST = "127.0.0.1"  # The server's hostname or IP address
+PORT = 65432  # The port used by the server
+
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+    s.connect((HOST, PORT)) 
+    s.sendall(b"Oi, Tudo Bem?")
+    data = s.recv(1024)
+
+print(f"Received {data!r}")
+```
+### Executando o cliente e o servidor
+Começamos nosso teste rodando primeiro o programa servidor
+```bash
+$ python servidor_de_eco.py
+```
+Depois iniciamos o cliente
+
+```bash
+$ python cliente_eco.py
+```
