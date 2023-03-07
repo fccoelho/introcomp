@@ -17,3 +17,14 @@ goto again
 ```
 
 Conseguiu? teste sua intepretação executando este código no interpretador [yabasic](https://2484.de/yabasic/).
+
+O Yabasic é uma implementação moderna de uma linguagem antiga cujo interesse, atualmente é meramente histórica, mas nos ensina a entender a evolução das linguagens.
+# Exercícios
+[Esta lista](/conteúdo/Introdução%20à%20programação%20em%20Python/lista1.md) conté vários exercícios simples de programação, que podem ser resolvidos em qualquer linguagem. vamos resolver o primeiro em basic!
+
+1. Crie um programa simples para imprimir “Hello, world!”
+```basic
+print "Hello, world"
+```
+
+Fácil, não? Agora desafie-se com os demais exercícios!

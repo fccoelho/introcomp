@@ -1,3 +1,6 @@
+# Lista de exercícios de Programação
+Esta lista pode ser re-utilizada para as várias linguagens de programação que vamos visitar: Basic, Shell e Python
+
 1. Crie um programa simples para imprimir “Hello, world!”
 1. Crie um programa simples para encontrar a média de dois números.
 2. Crie um programa para calcular a área de um círculo
