@@ -84,5 +84,28 @@ Para apagar variáveis podemos usar o comando `unset`.
 unset x
 ```
 
+## Operações Aritméticas
+Expressões aritméticas podem ser calculadas através do aplicativo `expr`
 
+```bash
+ expr 2 + 3
+```
+
+Note que os espaços são parte da sintaxe, neste caso.
+Uma forma mais direta de fazer o mesmo (com ou sem espaços) é utilizando o `$` de uma nova maneira:
+
+```bash
+echo $((2**3))
+```
+
+Abaixo estão os operadores válidos.
+
+operação | operador |
+---------|-----------
+soma  | +|
+Subtração | - |
+Multiplicação | * |
+Divisão | / |
+Exponenciação | ** | 
+Resto da divisão | % |
 
