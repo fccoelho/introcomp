@@ -19,12 +19,13 @@ Curso de introdução à computação da EMAp-FGV
    3. [Bluetooth](https://en.wikipedia.org/wiki/Bluetooth)
    4. [SSH](https://en.wikipedia.org/wiki/Secure_Shell) - Secure Shell Protocol.
    5. Redes [P2P](https://en.wikipedia.org/wiki/Peer-to-peer) arquivos distribuídos.
-6. Informação Analógica vs Digital - Conceitos básicos, princípios de [ADC](https://en.wikipedia.org/wiki/Analog-to-digital_converter) e [DAC](https://en.wikipedia.org/wiki/Digital-to-analog_converter)
-7. [Bases numéricas](https://www.trccompsci.online/mediawiki/index.php/Number_Systems_/_Number_Bases) - Bases numericas e seu papel na [computação](https://en.wikipedia.org/wiki/Computer_number_format).
-8. Linguagem de máquina e Assembly. Introdução conceitual ao que é linguagem de máquina e a linguagem assembly, com exemplos.
-9. [LaTeX](https://pt.wikipedia.org/wiki/LaTeX) - Introdução à edição de textos com LaTeX
-10. Fazendo Apresentações com LaTeX -  o pacote [Beamer](https://ctan.org/pkg/beamer)
-11. O terminal. Usando o terminal no [Linux](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) e no [Windows](https://learn.microsoft.com/en-us/windows/terminal/)
-12. [Linguagem Shell](https://pt.wikipedia.org/wiki/Shell_script) - introdução à programação usando shell no Linux.
+   
+6.  O terminal. Usando o terminal no [Linux](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) e no [Windows](https://learn.microsoft.com/en-us/windows/terminal/) 
+7.  [Linguagem Shell](https://pt.wikipedia.org/wiki/Shell_script) - introdução à programação usando shell no Linux.
+8.  [LaTeX](https://pt.wikipedia.org/wiki/LaTeX) - Introdução à edição de textos com LaTeX
+9.  Fazendo Apresentações com LaTeX -  o pacote [Beamer](https://ctan.org/pkg/beamer)
+10. Informação Analógica vs Digital - Conceitos básicos, princípios de [ADC](https://en.wikipedia.org/wiki/Analog-to-digital_converter) e [DAC](https://en.wikipedia.org/wiki/Digital-to-analog_converter)
+11. [Bases numéricas](https://www.trccompsci.online/mediawiki/index.php/Number_Systems_/_Number_Bases) - Bases numericas e seu papel na [computação](https://en.wikipedia.org/wiki/Computer_number_format).
+12. Linguagem de máquina e Assembly. Introdução conceitual ao que é linguagem de máquina e a linguagem assembly, com exemplos.
 13. Introdução à programação em Python.
 14. Introdução à Computação Científica.
