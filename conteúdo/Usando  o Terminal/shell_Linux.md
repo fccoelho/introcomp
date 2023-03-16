@@ -212,7 +212,214 @@ $ sort duplicado.txt | uniq | wc -l
 
 A esta altura você já advinhou o que faz o comando `sort`, mas se ainda estiver com dúvidas pode usar o `man` para descobrir!
 
+No exemplo acima passamos um arquivo para o programa sort abrir. Digamos que temos um outro arquivo em nosso diretório, chamado `lista_de_compras.txt`
+
+```bash
+$ cat lista_de_compras.txt
+óleo
+azeite
+Biscoito 
+banana
+```
+
+a outra maneira de ordenar nossa lista é:
+
+```bash
+$ sort < lista_de_compras.txt
+```
+Neste caso o operador `<` estáenviando o conteúdo do arquivo para a `STDIN` do programa `sort`. Como de costume a `STDOUT` continua direcionada para o terminal.
+
+**Quiz:**
+
+    Experimente estender a pipeline com outros comando que você já aprendeu. Por exemplo: qual a resposta deste comando: 'sort -r lista_de_compras.txt | head -1' ?
+
+## Permissões de Arquivos
+O controle de acesso a arquivos no Linux se dá em três níveis: *dono*, *grupo*, e *outros*. Estas permissões são codificadas em uma string de 10 caracteres, que podemos ver quando usamos o comando `ls -l`
+
+```bash
+$ ls -l
+total 4
+-rw-rw-r-- 1 fccoelho fccoelho 30 mar 16 13:29 lista_de_compras.txt
+```
+O primeiro caracter pode ser `d` se o nome for um diretório ou `-` se for um arquivo (existem outras possibilidades também). Os 9 caracteres seguintes devem ser lidos em grupos de 3:
+
+dono|grupo|outros
+----|-----|------
+rwx|rwx|rwx
+
+o primeiro caracter de cada trinca diz se a leitura é permitida: `r`, ou não: `-`. O segundo diz se a escrita é permitida: `w`, ou não: `-` e o terceiro diz se o arquivo é executável: `x` ou não:`-`. Sumarizando:
+![permissões](permissions.png)
+
+cada possibilidade de permissão pode ser representada em notação numérica octal, mais compactas, como ilustrado na tabela acima.
+
+Para alterar as pemissões de arquivos usanmos o comando `chmod`. Apenas o dono do arquivo ou diretório pode mudar suas permissões.
+```bash
+$ chmod --help
+Usage: chmod [OPTION]... MODE[,MODE]... FILE...
+  or:  chmod [OPTION]... OCTAL-MODE FILE...
+  or:  chmod [OPTION]... --reference=RFILE FILE...
+Change the mode of each FILE to MODE.
+With --reference, change the mode of each FILE to that of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's mode instead of MODE values
+  -R, --recursive        change files and directories recursively
+      --help     display this help and exit
+      --version  output version information and exit
+
+Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
+```
+
+**Exemplos:**
+
+1. `chmod a+x <arq>`: Dá acesso de leitura a todos os usuários.
+2. `chmod +r <arq>`: O mesmo que acima
+3. `chmod og-x <arq>`: Retira permissões de execução de usuários que não sejam o dono.
+4. `chmod u+rwx <arq>`: Dá todas as permissões ao dono.
+5. `chmod o-rwx <arq>`: Retira todas as permissões de usuários que não sejam o dono ou pertençam ao grupo do arquivo. 
+
+## Links
+No sistema de arquivos do Linux todos os arquivos e diretórios possuem um identificador numérico chamado número do **inode**. Podemos descobrir este número facilmente
+```bash
+$ touch foo
+$ ls -i foo
+21191 foo
+```
+### Links rígidos
+ Um link permite darmos mais de um nome a um mesmo arquivo. Podemos criar links com o comando `ln`
+
+ ```bash
+ $ ln foo bar
+ ```
+ o comando acima cria um um link chamado `bar` para o arquivo `foo`. Verifique agora os seus respectivos números de **inode**. Eles possuem o mesmo número pois correspondem ao mesmo arquivo. 
+
+ **Quiz:**
+
+    Apague o arquivo `foo`. O que acontece com `bar`?
+
 Existem muitas outras pérolas no console do Unix. Seguem algumas referências abaixo.
+
+
+### Links Simbólicos
+O segundo tipo de link também conhecido como `symlink`, é criado com o comando `ln -s`.
+
+**Quiz:**
+
+    Crie um link symbólico e investigue suas propriedades.
+
+## Manipulando Textos
+A manipulação de textos é uma tarefa muito comum para Cientistas de dados. Existem comandos na shell do Linux extremamente poderosos para manipulação de textos:
+
+### O editor **sed**
+O acrônimo `sed` significa "stream editor" ou seja ueditor de fluxos de texto. Mas o qu significa isso? Basicamente significa que é um editor desenhoado para processar uma sequência de dados textuais de tamanho arbitrário, e mais importante de maneira não interativa.
+
+para entender o `sed` vamos precisar de um texto.
+
+```bash
+$ wget https://github.com/Illumina/licenses/raw/master/Simplified-BSD-License.txt > BSD.txt
+```
+
+O `sed` é invocado da seguinte maneira: `sed [opções] comandos <arq. de entrada>`
+
+Vamos ver alguns exemplos:
+```bash
+$ sed '' BSD.txt
+Copyright (c) 2010-2015 Illumina, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIEDi
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+Se não especificarmos nenhum comando, o texto sai pelo `STDOUT` do `sed` como entrou. Podemos também entregar o texto ao `sed` via `STDIN`.
+
+```bash
+$ cat BSD.txt | sed 'p' 
+Copyright (c) The Regents of the University of California.
+Copyright (c) The Regents of the University of California.
+All rights reserved.
+All rights reserved.
+
+
+Redistribution and use in source and binary forms, with or without
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+modification, are permitted provided that the following conditions
+are met:
+are met:
+. . .
+```
+O comando `p` significa print, então para cada linha o sed a imprime, mas como tudo que entra também sai, as linhas terminas saindo duplicadas Para evitar esta duplicação basta colocar a opção `-n`: `sed -n 'p' BSD.txt`. A esta altura você já percebeu que o `sed` trabalha linha a linha.
+
+```bash
+$ sed -n '1,5p' BSD.txt
+Copyright (c) 2010-2015 Illumina, Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+```
+Aqui especificamos que o comando deve ser aplicado aenas às linhas de 1 a 5.
+
+podemos também especificar linhas alternadas:
+
+```bash
+$ sed -n '1~2p' BSD.txt > 2em2.txt
+```
+**Quizz:**
+
+    Modifique o comando acima, para retornar as linhas que foram omitidas. Dica: troque o comando `p` por `d`.
+
+Note que o sed não está modificando o arquivo de entrada, apenas retornando o resultado da sua transformação no terminal. Mas é possível pedir que ele edite diretamento no arquivo original, usando a opção `-i`. Porém devemos usar esta opção **com cuidado**, pois as alterações são **irreversíveis!**. Felizmente o sed nos dá a opção de criarmos um backup neste caso:
+
+```bash
+$ sed -i.bak '1~2d' 2em2.txt
+```
+ experimente!
+
+Um dos usos mais comuns do `sed` é para substituir strings. Por exemplo
+
+```bash
+$ sed 's/copyright/copyleft/' < BSD.txt
+```
+Este comando entretanto apenas substitui a primeira ocorrência da palavra buscada em cada linha. Para substituir todas as ocorrências:
+
+```bash
+$ sed 's/copyright/copyleft/g' < BSD.txt
+```
+Se você quisesse substituir apenas a segunda ocorrência da palavra em cada linha, bastaria trocar o `g` por *2*.
+
+para mostrar apenas as linhas onde a substituição foi feita:
+
+```bash
+$ sed -n 's/copyright/copyleft/gp' < BSD.txt
+```
+mas o nosso *script* não substituiu as ocorrências de "COPYRIGHT" devido à sensibilidade à capitalização. Sem problemas:
+```bash
+$ sed -n 's/copyright/copyleft/gip' < BSD.txt
+```
+Buscas mais complexas podem empregar *expressões regulares* que fogem ao escopo desta aula.
 
 ## Referências
 
