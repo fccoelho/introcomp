@@ -109,3 +109,26 @@ Divisão | / |
 Exponenciação | ** | 
 Resto da divisão | % |
 
+## Laços
+A linguagem shell como qualquer linguagem que se preze possui construtos para realizar operações em laços de repetição.
+
+Os comandos abaixo executam os comandos dentro do laço até que a condição de execução retorne `0`, ou o comando `break` ocorra. Caso seja necessário saltar uma execução o comando `continue` pode ser utilizado também.
+
+### until
+
+```bash
+$ until test-commands; do consequent-commands; done
+```
+
+### while 
+
+```bash
+$ while test-commands; do consequent-commands; done
+```
+
+### for
+
+```bash
+$ for name [ [in [words …] ] ; ] do commands; done
+$ for (( expr1 ; expr2 ; expr3 )) ; do commands ; done
+```
