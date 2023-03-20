@@ -115,20 +115,86 @@ A linguagem shell como qualquer linguagem que se preze possui construtos para re
 Os comandos abaixo executam os comandos dentro do laço até que a condição de execução retorne `0`, ou o comando `break` ocorra. Caso seja necessário saltar uma execução o comando `continue` pode ser utilizado também.
 
 ### until
+O comando `until` executa os comandos dentro do laço até que a condição de execução retorne `0` ou se torne verdadeira.
 
+Note que abaixo, o `-eq` significa "é igual a".
 ```bash
-$ until test-commands; do consequent-commands; done
+x=0
+until [ $x -eq 10 ]; do
+    echo $x
+    x=$((x+1))
+done
 ```
+Agora é um bom momento para explorar os operadores de comparação do bash:
+
+operador|sgnificado|exemplo
+--------|----------|-------
+-eq | igual a | [ $x -eq 10 ]
+-ne | diferente de | [ $x -ne 10 ]
+-gt | maior que | [ $x -gt 10 ]
+-ge | maior ou igual a | [ $x -ge 10 ]
+-lt | menor que | [ $x -lt 10 ]
+-le | menor ou igual a | [ $x -le 10 ]
+< | menor que (com parenteses duplos) | (($x < 10))
+\> | maior que (com parenteses duplos) | (($x > 10))
+<= | menor ou igual a (com parenteses duplos) | (($x <= 10))
+\>= | maior ou igual a (com parenteses duplos) | (($x >= 10))
+!= | diferente de (com parenteses duplos) | (($x != 10))
 
 ### while 
+O laço `while` executa os comandos dentro do laço enquanto a condição de execução retornar `0` ou seja verdadeira.
 
 ```bash
 $ while test-commands; do consequent-commands; done
 ```
 
 ### for
+O laço `for` executa os comandos dentro do laço para cada elemento de uma lista.
+```bash
+frutas=(banana abacaxi uva)
+for fruta in ${frutas[@]};
+do 
+    echo $fruta 
+done
+```
+
+## Condicionais
+No bash podemos utilizar os comandos `if`, `elif` e `else` para executar comandos condicionalmente.
+### if
+A clausula `if` executa os comandos dentro do laço se a condição de execução retornar `0` ou for verdadeira.
+```bash
+x=1
+if [ $x -eq 1 ]; then
+    echo "x é igual a 1"
+fi
+```
+
+### if-else
+A clausula `if-else` executa os comandos dentro do laço se a condição de execução retornar `0` ou for verdadeira. Caso contrário, executa os comandos dentro do `else`.
 
 ```bash
-$ for name [ [in [words …] ] ; ] do commands; done
-$ for (( expr1 ; expr2 ; expr3 )) ; do commands ; done
+x=1
+if [ $x -eq 5 ]; then
+    echo "x é igual a 5"
+else
+    echo "x é diferente de 5"
+fi
+```
+
+### elif
+A clausula `elif` executa os comandos dentro do laço se a condição de execução retornar `0` ou for verdadeira. Caso contrário, executa os comandos dentro do `elif` seguinte.
+
+```bash
+x=1
+if [ $x -eq 5 ]; then
+    echo "x é igual a 5"
+elif [ $x -eq 4 ]; then
+    echo "x é igual a 4"
+elif [ $x -eq 3 ]; then
+    echo "x é igual a 3"
+elif [ $x -eq 2 ]; then
+    echo "x é igual a 2"
+else
+    echo "x é diferente de 5, 4, 3 e 2"
+fi
 ```
