@@ -57,4 +57,3 @@ $ grep -En "(que ){1,2}" GREP.md
 ```
 A opção `-E` permite que o GREP utilize expressões regulares estendidas. A opção `-n` permite que o GREP exiba o número da linha. A expressão regular `(que ){1,2}` indica que a palavra "que" deve ser repetida de 1 a 2 vezes.
 
-
