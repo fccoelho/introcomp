@@ -1,4 +1,4 @@
-import sys
+import argparse
 
 def le_arquivo(nome_arq):
     with open(nome_arq,'r') as f:
@@ -15,4 +15,7 @@ def le_arquivo(nome_arq):
 
 
 if __name__=="__main__":
-    le_arquivo(nome_arq=sys.argv[1])
+    parser = argparse.ArgumentParser(description='Lê um arquivo CSV')
+    parser.add_argument("csv", type=open, help="Arquivo CSV")
+    # print(dir(parser.parse_args()))
+    le_arquivo(nome_arq=parser.parse_args().csv.name)
