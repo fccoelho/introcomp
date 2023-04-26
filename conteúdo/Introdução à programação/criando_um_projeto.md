@@ -12,3 +12,8 @@ $ mkdir autoreport
 $ cd autoreport
 $ poetry init
 ```
+Após instalar o poetry no Windows é necessário adicionar o Poetry ao PATH para isso use o seguinte comando do terminal `cmd`
+
+```
+set PATH=%PATH%;%USERPROFILE%\AppData\Roaming\pypoetry\venv\Scripts
+```
