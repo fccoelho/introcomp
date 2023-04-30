@@ -2,15 +2,16 @@
 
 ## Tipos básicos
 1. dada uma lista  de números aleatórios criada conforme o código abaixo:
+   
 ```python
 import random
 lista = [random.randint(0, 15000) for i in range(500)]
 ```
 com apenas uma linha de código, encontre quantos números distintos existem na lista.
 
-2. No módulo `collections` do python existe uma classe chamada `Counter` que é um dicionário especial que conta a frequência de cada elemento de uma lista. Utilize essa classe para contar a frequência de cada elemento da lista acima.
-3. Resolva o mesmo problema da questão anterior, mas agora utilizando o tipo defaultdict do módulo `collections`. 
-4. Escreva um script que receba dois números como argumentos de linha de comando e imprima a soma deles.
+1. No módulo `collections` do python existe uma classe chamada `Counter` que é um dicionário especial que conta a frequência de cada elemento de uma lista. Utilize essa classe para contar a frequência de cada elemento da lista acima.
+2. Resolva o mesmo problema da questão anterior, mas agora utilizando o tipo defaultdict do módulo `collections`. 
+3. Escreva um script que receba dois números como argumentos de linha de comando e imprima a soma deles.
 
 ## Funções
 
