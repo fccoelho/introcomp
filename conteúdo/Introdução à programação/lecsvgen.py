@@ -1,27 +1,28 @@
-
-
 def gen_linha(nome_arq):
-    with open(nome_arq,'r') as f:
-        for i,l in enumerate(f.readlines()):
-            if i >=4:
-                yield l.strip().split('","') 
-        
-            
-            
-            
-    # print(linhas[:2])
-    # lcab = len(linhas[0])
-    # for n, l in enumerate(linhas):
-    #     try:
-    #         assert len(l) == lcab
-    #     except AssertionError:
-    #         print (n, len(l))
-        # print (l) 
+    with open(nome_arq, 'r') as f:
+        for i, l in enumerate(f.readlines()):
+            if i >= 4:
+                yield l.strip().strip('"').split('","')
 
 
-if __name__=="__main__":
-    nome_arq="dados.csv"
-    # print(dir(parser.parse_args()))
-    for l in gen_linha(nome_arq):
+def converte_linha(nome_arq):
+
+    for linha in gen_linha(nome_arq):
+        linha_convertida = []
+        for el in linha:
+            try:
+                f = float(el)
+                if int(f) == f:
+                    linha_convertida.append(int(f))
+                else:
+                    linha_convertida.append(f)
+            except ValueError:
+                linha_convertida.append(el)
+        yield linha_convertida
+
+
+
+if __name__ == "__main__":
+    nome_arq = "dados.csv"
+    for l in converte_linha(nome_arq):
         print(l)
-    # le_arquivo()
