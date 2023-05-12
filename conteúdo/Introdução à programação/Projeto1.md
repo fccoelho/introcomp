@@ -61,7 +61,7 @@ Agora que você já extraiu os dados do SINAN e os carregou em um DataFrame, vam
 6. Quantos casos de dengue foram notificados no Brasil em 2019, por sexo?
 7. Quantos casos de dengue foram notificados no Brasil em 2019, por raça/cor?
 
-Com os resultados obtidos, construa um relatório em LaTeX utilizando o Overleaf. O relatório deve conter as seguintes seções:
+Com os resultados obtidos, construa um relatório em LaTeX. O relatório deve conter as seguintes seções:
 1. **Introdução:** Ontem você deve explicar o que é o SINAN e o que é o agravo de notificação escolhido. Procure descobrir o código *CID10* (classificação internacional de doenças) para o agravo escolhido. Por exemplo, o código *CID10* para a dengue é **A90**.
 2. **Metodologia:** Nesta seção, você deve explicar como os dados foram extraídos do SINAN e como foram analisados. Para isso, você deve explicar como a biblioteca PySUS foi utilizada para extrair os dados do SINAN e como a biblioteca Pandas foi utilizada para analisar os dados.
 3. **Resultados:** Nesta seção, você deve apresentar os resultados obtidos na análise exploratória dos dados. Para isso, você deve apresentar os resultados obtidos nas perguntas 1 a 7 acima. Para cada pergunta, você deve apresentar os resultados em forma de tabela e gráfico. Para isso, utilize as funções da biblioteca Pandas para gerar as tabelas e gráficos.
