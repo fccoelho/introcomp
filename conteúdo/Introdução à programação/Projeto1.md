@@ -54,7 +54,7 @@ df = pd.read_csv('nome_do_agravo.csv')
 
 ## Tarefas de análise
 
-### Análise exploartória dos dados
+### Análise exploratória dos dados
 Agora que você já extraiu os dados do SINAN e os carregou em um DataFrame, vamos realizar uma análise exploratória dos dados. Para isso, utilize as funções da biblioteca Pandas para responder às seguintes perguntas, assumindo que o agravo escolhido foi a *dengue* (substitua pelo agravo escolhido):
 1. Quantos casos de dengue foram notificados no Brasil em 2019?
 2. Quantos casos de dengue foram notificados no Brasil em 2019, por município?
