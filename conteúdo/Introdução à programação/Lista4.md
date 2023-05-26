@@ -13,3 +13,5 @@ Nesta lista de exercícios vamos explorar estas duas bibliotecas que são muito 
 ## Pandas
 1. Crie um dataframe com 4 colunas e 400 linhas, sem usar loops.
 2. Renomeie as colunas deste dataframe.
+3. Extraia a array correspondente aos dados no Dataframe
+4. Adicione as 4 colunas criando uma nova coluna com a resposta
