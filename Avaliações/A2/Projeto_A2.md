@@ -1,5 +1,5 @@
 # Avaliação A2
-Este documento inclui as instruções para a realização da avaliação A2 da disciplina de Introdução à Programação para Ciência de Dados.
+Este documento inclui as instruções para a realização da avaliação A2 da disciplina de Introdução à Computação para Ciência de Dados.
 
 ## Forma da entrega
 O trabalho deve ser feito em duplas. A entrega deve ser feita através do Eclass, na forma de um arquivo compactado (`.zip`) contendo os 3 seguintes arquivos:
