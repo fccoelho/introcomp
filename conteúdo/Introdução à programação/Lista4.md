@@ -9,6 +9,9 @@ Nesta lista de exercícios vamos explorar estas duas bibliotecas que são muito 
 4. calcule a transposta de cada matriz
 5. multiplique as duas matrizes
 6. Salve as matrizes de entrada e a de saída em arquivos. Qual o tamanho dos arquivos gerados?
+7. Crie um vetor (array unidimensional) cujos valores sejam o resultado da função $f(x) = 3x^2 - 2x +7$ para cada valor de x em um vetor dado com 1000 elementos, construído com linspace.
+8. Encontre uma maneira de calcular numericamente a primeira derivada da função acima, e construa um plot com as duas funções: A derivada calculada numericamente e a derivada analítica de $3x^2 - 2x +7$.
+9. O índice de massa corporal $IMC=peso/altura^2$ é um critério da Organização Mundial de Saúde para dar uma indicação sobre a condição de peso de uma pessoa adulta. construa uma array com 100 os valores de altura entre 150cm a 195cm, e  100 valores de peso entre 50kg e 100kg. Calcule o IMC para todas as valores e construa uma matriz 2D com os valores de IMC. 
 
 ## Pandas
 1. Crie um dataframe com 4 colunas e 400 linhas, sem usar loops.
