@@ -103,7 +103,7 @@ def questao_7(df):
     for uf in df.SG_UF_NOT.unique():
         if uf == 'nan':
             continue
-        resposta[uf] = (df[df.SG_UF_NOT == uf].ID_MUNICIP.value_counts() > 0).sum() / munestado.get(uf, 1)
+        resposta[uf] = (df[df.SG_UF_NOT == uf].ID_MUNICIP.value_counts() > 0).sum() / munestado[int(uf)]
 
     return resposta
 
@@ -131,7 +131,7 @@ def questao_9(df):
         df['DT_NOTIFICACAO'] = pd.to_datetime(df.DT_NOTIFICACAO.fillna(0), format='%Y-%m-%d')
         df['DT_SINTOMAS'] = pd.to_datetime(df.DT_SIN_PRI, format='%Y-%m-%d')
     df['ATRASO_NOT'] = (df.DT_NOTIFICACAO - df.DT_SINTOMAS).dt.days
-    return {SIGLAS.get(c,'outro'): (df[df.SG_UF_NOT == c].ATRASO_NOT.mean(), df[df.SG_UF_NOT == c].ATRASO_NOT.std()) for c in
+    return {SIGLAS.get(int(c),'outro'): (df[df.SG_UF_NOT == c].ATRASO_NOT.mean(), df[df.SG_UF_NOT == c].ATRASO_NOT.std()) for c in
             df.SG_UF_NOT.unique()}
 
 
