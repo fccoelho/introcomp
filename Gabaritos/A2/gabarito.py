@@ -136,8 +136,12 @@ def questao_9(df):
 
 
 def questao_10(df):
-    df['DT_NOTIFICACAO'] = pd.to_datetime(df.DT_NOTIFIC, format='%Y%m%d')
-    df['DT_SINTOMAS'] = pd.to_datetime(df.DT_SIN_PRI, format='%Y%m%d')
+    try:
+        df['DT_NOTIFICACAO'] = pd.to_datetime(df.DT_NOTIFIC, format='%Y%m%d')
+        df['DT_SINTOMAS'] = pd.to_datetime(df.DT_SIN_PRI, format='%Y%m%d')
+    except ValueError:
+        df['DT_NOTIFICACAO'] = pd.to_datetime(df.DT_NOTIFIC.fillna(0), format='%Y-%m-%d')
+        df['DT_SINTOMAS'] = pd.to_datetime(df.DT_SIN_PRI, format='%Y-%m-%d')
     df['ATRASO_NOT'] = (df.DT_NOTIFICACAO - df.DT_SINTOMAS).dt.days
 
     atraso_médio = df.groupby('ID_MUNICIP').agg({'ATRASO_NOT': pd.np.mean})
