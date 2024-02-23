@@ -5,5 +5,9 @@ Historicamente, a computação analógica foi a primeira forma de computação u
 
 Atualmente, a computação analógica é utilizada em algumas aplicações específicas, como processamento de sinais, controle de sistemas físicos e simulações de fenômenos naturais. No entanto, a computação digital é muito mais comum e amplamente utilizada em todos os tipos de dispositivos eletrônicos, desde computadores pessoais até smartphones e dispositivos embarcados.
 
-## Computação Neuromórfica
-A computação neuromórfica é um tipo de computação analógica que se baseia no funcionamento do cérebro humano. Ela utiliza redes neurais artificiais para realizar tarefas de processamento de dados, como reconhecimento de padrões, aprendizado de máquina e inteligência artificial.
+Vídeo sobre [Computação Analógica:](https://youtu.be/GVsUOuSjvcg?si=T--CkceYZQ6kdCWn)
+
+Vídeo sobre [programação de um computador analógico](https://youtu.be/6AgkTdQXFTY?si=r4xBwviWlinMEfI-).
+
+## Photonic Analog Computing
+A computação analógica baseada em fotônica é uma área de pesquisa ativa que visa explorar as propriedades únicas da luz para realizar operações de computação. A fotônica é a ciência e a tecnologia que envolvem a geração, manipulação e detecção de fótons, as partículas elementares da luz. A computação fotônica tem o potencial de oferecer vantagens significativas em relação à computação eletrônica, incluindo maior velocidade, eficiência energética e capacidade de processamento paralelo.
