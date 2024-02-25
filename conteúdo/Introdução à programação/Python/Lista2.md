@@ -17,4 +17,4 @@ com apenas uma linha de código, encontre quantos números distintos existem na 
 
 1. Escreva uma função que receba um número variável de argumentos e retorne a soma de todos eles.
 2. Escreva um script que execute uma função `main` apenas quando é executado diretamente, mas não quando é importado como um módulo.
-3. Escreva uma função que leia o arquivo [dados.csv](dados.csv) e retorne uma lista de tuplas onde cada tupla é uma linha do arquivo. Cada elemento das tuplas é um dos elementos da linha separados por vírgulas. As 4 primeiras linhas do arquivo são comentarios e devem ser ignoradas. A quinta é o cabeçalho que deve ser tratada sem distinção das demais. 
+3. Escreva uma função que leia o arquivo [dados.csv](../dados.csv) e retorne uma lista de tuplas onde cada tupla é uma linha do arquivo. Cada elemento das tuplas é um dos elementos da linha separados por vírgulas. As 4 primeiras linhas do arquivo são comentarios e devem ser ignoradas. A quinta é o cabeçalho que deve ser tratada sem distinção das demais. 

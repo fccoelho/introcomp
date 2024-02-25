@@ -1,2 +1,2 @@
-1. Introdução ao GIT
-2. Introdução ao GitHub
+1. Sistemas operacionais
+2. Software.

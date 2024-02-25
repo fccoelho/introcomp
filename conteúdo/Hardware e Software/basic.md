@@ -27,4 +27,23 @@ O Yabasic é uma implementação moderna de uma linguagem antiga cujo interesse,
 print "Hello, world"
 ```
 
-Fácil, não? Agora desafie-se com os demais exercícios!
+Fácil, não? Agora desafie-se com os demais exercícios! Complete o programas abaixo:
+## Desafio
+1. Crie um programa que imprima a sequência de Fibonacci até o décimo termo. 
+
+
+```basic
+a=0
+b=1
+```
+2. Crie um programa que imprima a tabuada de 7.
+
+3. Calcule a soma de dois números e imprima o resultado.
+4. Calcule a média de 5 números e imprima o resultado.
+5. Crie um programa que receba um número e imprima se ele é par ou ímpar.
+6. Crie um programa que receba um número e imprima se ele é primo ou não.
+7. Crie um programa que receba um número e imprima a tabuada desse número.
+8. Crie um programa que receba um número e imprima a tabuada de todos os números de 1 até esse número.
+9. Crie um programa que receba um número e imprima a tabuada de todos os números ímpares de 1 até esse número.
+10. Crie um programa que receba um número e imprima a tabuada de todos os números pares de 1 até esse número.
+
