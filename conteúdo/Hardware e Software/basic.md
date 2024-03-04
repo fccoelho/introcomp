@@ -22,10 +22,9 @@ O Yabasic é uma implementação moderna de uma linguagem antiga cujo interesse,
 # Exercícios
 [Esta lista](/conteúdo/Introdução%20à%20programação%20em%20Python/lista1.md) conté vários exercícios simples de programação, que podem ser resolvidos em qualquer linguagem. vamos resolver o primeiro em basic!
 
-1. Crie um programa simples para imprimir “Alô, Fulano!”
+1. Crie um programa simples para imprimir “Hello, world!”
 ```basic
-input "qual o seu nome? " N$
-print "Olá ", N$, "!"
+print "Hello, world"
 ```
 
 Fácil, não? Agora desafie-se com os demais exercícios! Complete o programas abaixo:
@@ -38,28 +37,13 @@ a=0
 b=1
 ```
 2. Crie um programa que imprima a tabuada de 7.
-3. Crie um programa que solicite dois números ao usuário e imprima a média deles.
-4. considere o programa abaixo:
-```basic
-print "Aperte uma tecla para continuar"
-print "(O program irá continuar após 10 segundos)"
-clear screen
-for a=1 to 10
-  print a
-  k$ = inkey$(1)
-  if (k$<>"") then goto done
-  endif
-next a
-label done
-print "Você pressionou a tecla ", k$
-``` 
-Agora escreva um programa similar, que faça uma pergunta do tipo "sim(S) ou não(N)"e caso o usuário não responda em 10 segundos, ou responda "N", saia do programa. caso contrario, imprima a resposta do usuário. Utilize o comando `goto` ou `gosub` para implementar a lógica.
 
-5. Considere o programa abaixo:
-```basic
-open window 200,200
-line 50,50, 100,100
-```
-Agora escreva um programa que desenhe um quadrado de lado 50, e um triângulo equilátero de lado 50. Utilize o comando `line` para desenhar os triângulos. Dica: a altura de um triângulo equilátero de lado `L` é `L*sqrt(3)/2`.
-
+3. Calcule a soma de dois números e imprima o resultado.
+4. Calcule a média de 5 números e imprima o resultado.
+5. Crie um programa que receba um número e imprima se ele é par ou ímpar.
+6. Crie um programa que receba um número e imprima se ele é primo ou não.
+7. Crie um programa que receba um número e imprima a tabuada desse número.
+8. Crie um programa que receba um número e imprima a tabuada de todos os números de 1 até esse número.
+9. Crie um programa que receba um número e imprima a tabuada de todos os números ímpares de 1 até esse número.
+10. Crie um programa que receba um número e imprima a tabuada de todos os números pares de 1 até esse número.
 
