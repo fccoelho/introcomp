@@ -159,6 +159,7 @@ $ ls
 ```
 
 ## Conectando comandos: introdução aos pipes.
+Todos os programas no Linux possuem [entradas e saídas padrão](https://en.wikipedia.org/wiki/Standard_streams). Elas são chamadas de STDIN e STDOUT, respectivamente. Então torna-se possível conetar a saída de um programa com a entrada de outro através de tubo ou "pipes" no jargão do Linux. 
 
 Suponha que você deseja saber quantos arquivos existem no seu diretório home. O comando `wc` (word count) faz a contagem:
 
@@ -174,7 +175,7 @@ ls ~ > file_list.txt
 wc -l file_list.txt
 rm file_list.txt
 ```
-Este método funciona mas requer a criação de uma arquivo temporário para conter o conteudo do diretório, que tem que ser deletado após a contagem.
+Este método funciona, mas requer a criação de um arquivo temporário para conter o conteudo do diretório, que tem que ser deletado após a contagem.
 
 Para simplificar esta solução precisamos saber que todos os processos no Linux possuem entradas e saídas padrão. Elas são chamadas de STDIN e STDOUT, respectivamente. Então torna-se possível conetar a saída de um programa com a entrada de outro através de tubo ou "pipes" no jargão do Linux.
 
