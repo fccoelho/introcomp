@@ -1,3 +1,3 @@
-1. 2. Introdução ao GIT
-2. Introdução ao GitHub
+1. Linguagem shell (bash)
+
 
