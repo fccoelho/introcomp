@@ -1,14 +1,14 @@
 # O aplicativo GREP
-O GREP é um aplicativo que permite a busca de padrões em arquivos de texto. Ele é muito útil para encontrar informações em arquivos de texto, como por exemplo, encontrar o nome de um usuário em um arquivo de log. Ele se utiliza de expressões regulares para realizar a busca.
+O [GREP](https://en.wikipedia.org/wiki/Grep) é um aplicativo que permite a busca de padrões em arquivos de texto. Ele é muito útil para encontrar informações em arquivos de texto, como por exemplo, encontrar o nome de um usuário em um arquivo de log. Ele se utiliza de expressões regulares para realizar a busca.
 
 ## Expressões regulares
-Uma expressão regular é uma sequência de caracteres que especifica um padrão de busca. Ela é composta por caracteres literais e metacaracteres. Os caracteres literais são os caracteres que você deseja encontrar na busca. Já os metacaracteres são caracteres especiais que indicam ações especiais na busca.
+Uma [expressão regular](https://en.wikipedia.org/wiki/Regular_expression) é uma sequência de caracteres que especifica um padrão de busca. Ela é composta por caracteres literais e metacaracteres. Os caracteres literais são os caracteres que você deseja encontrar na busca. Já os metacaracteres são caracteres especiais que indicam ações especiais na busca.
 
 ### Caracteres literais
 Os caracteres literais são os caracteres que você deseja encontrar na busca. Por exemplo, se você deseja encontrar a palavra "teste" em um arquivo, você pode utilizar a expressão regular `teste` para realizar a busca.
 
 ### Metacaracteres
-Os metacaracteres são caracteres especiais que indicam ações especiais na busca. Por exemplo, se você deseja encontrar a palavra "teste" em um arquivo, você pode utilizar a expressão regular `teste` para realizar a busca. Porém, se você deseja encontrar a palavra "teste" seguida de um espaço em branco, você pode utilizar a expressão regular `teste\s` para realizar a busca.
+Os [metacaracteres](https://en.wikipedia.org/wiki/Metacharacter) são caracteres especiais que indicam ações especiais na busca. Por exemplo, se você deseja encontrar a palavra "teste" em um arquivo, você pode utilizar a expressão regular `teste` para realizar a busca. Porém, se você deseja encontrar a palavra "teste" seguida de um espaço em branco, você pode utilizar a expressão regular `teste\s` para realizar a busca.
 
 exemplo:
 ```bash
