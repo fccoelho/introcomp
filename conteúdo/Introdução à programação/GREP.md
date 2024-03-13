@@ -57,3 +57,18 @@ $ grep -En "(que ){1,2}" GREP.md
 ```
 A opção `-E` permite que o GREP utilize expressões regulares estendidas. A opção `-n` permite que o GREP exiba o número da linha. A expressão regular `(que ){1,2}` indica que a palavra "que" deve ser repetida de 1 a 2 vezes.
 
+### Combinando comandos do GREP com o sed
+O GREP pode ser combinado com o comando `sed` para realizar substituições em arquivos de texto. Por exemplo, se você deseja substituir a palavra "teste" pela palavra "exemplo" em um arquivo chamado `dados.csv`, você pode utilizar o comando abaixo:
+```bash
+$ sed "s/BRA/BR/g" dados.csv | grep -c "BR"
+```
+o exemplo acima substitui a palavra "BRA" pela palavra "BR" e conta quantas vezes a palavra "BR" aparece no arquivo.
+
+## O comando CUT
+O comando `cut` é um comando do sistema operacional Unix que é utilizado para extrair seções de linhas de arquivos de texto. Ele é muito útil para extrair informações de arquivos de texto, como por exemplo, extrair o nome de um usuário de um arquivo de log, ou para extrair dados de uma arquivo CSV. 
+
+Considere o exemplo abaixo usando o arquivo `dados.csv`. Este aquivo conté as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos extrair o valor do indicador para o ano de 1960.
+```bash
+$ cut -d, -f1,4 dados.csv
+```
+O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-d,` indica que o delimitador das colunas é a vírgula. A opção `-f1,4` indica que as colunas 1 e 4 devem ser extraídas. Como este comando pode ser melhorado?
