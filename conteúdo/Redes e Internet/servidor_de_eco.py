@@ -10,10 +10,13 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: # cria o Socket
     s.bind((HOST, PORT)) # Conecta o socket ao host e porta
     s.listen() # começa a escutar...
     conn, addr = s.accept() # Aceita a conexão
+    print("Escutando por mensagens")
     with conn:
         print(f"Connectado por {addr}")
         while True:
             data = conn.recv(1024) # Tenta receber dados
-            if not data:
+            print(data)
+            if data == b"Fim":
+                conn.sendall(b"Tchau!")
                 break
             conn.sendall(data) # Envia de volta os dados (eco)
