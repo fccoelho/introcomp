@@ -36,9 +36,30 @@ Todos os computadores em uma rede precisam ter um endereço. O esquema de endere
 ### Classes de rede e máscaras
 Originalmente os endereços eram divididos em blocos denominados [classes](https://en.wikipedia.org/wiki/Classful_network). Mas esta divisão a priori mostrou-se pouco eficiente, pois o espaço de endereços a ser buscados durante o [roteamento](https://en.wikipedia.org/wiki/Routing) era muito grande. Criou-se então o conceito de máscaras que definiam intervalos de endereços correspondentes a [sub-redes](https://en.wikipedia.org/wiki/Subnetwork). Desta forma todos os computadores em uma sub-rede têm o mesmo prefixo, por exemplo: 10.23.23.123 e 10.23.23.127 pertence a uma mesma sub-rede que pode ser identificada pela máscara 255.255.255.0.
 
+#### Cauculando Mascaras de Subrede
+Para calcular a máscara de subrede, basta converter o endereço IP e a máscara de subrede para binário e aplicar a operação lógica AND bit a bit. Por exemplo, para calcular a máscara de subrede para o endereço IP[Máscaras de sub-rede](https://en.wikipedia.org/wiki/Subnet) são usadas para definir o intervalo de endereços que pertencem a uma sub-rede. Para calcular a máscara de subrede para o endereço IP 198.51.100.123, basta converter o endereço IP para binário e aplicar a operação lógica AND bit a bit com a máscara de subrede 255.255.255.0. O resultado será o endereço de subrede
+    
+```python
+#convertendo o IP 198.51.100.123 para binário
+endereço = [198, 51, 100, 123]
+endereço_binário = [bin(i)[2:].zfill(8) for i in endereço]
+ # Calculando a máscara de subrede de sub-rede
+máscara = [255, 255, 255, 0]
+máscara_binária = [bin(i)[2:].zfill(8) for i in máscara]
+# Aplicando a operação lógica AND 
+resultado = [a & m for a,m in zip(endereço, máscara)]
+# Note que o operador AND binário, &, quando aplicado a dois números em base 10, primeiro os converte para binário e depois aplica a operação AND bit a bit.
+```
+**Exercício**: usando a conversão para binário gerada acima, calcule manualmente o endereço de sub-rede, fazendo a operação AND e reconvertendo de volta para decimal. Compare suas contas manuais com o valor da variável `resultado`.
+ 
+
+
+
+
+
 #### Notação CIDR
 [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation) significa "Classless Inter-Domain Routing" é uma notação simplificada para representar máscaras de endereços.
-Ela consiste de um endereço IP seguido de uma "/" e um número decimal. Este número decimal representa o número de bits "1" no início do endereço. Logo, 198.51.100.0/24 corresponte à seguinte máscara de subrede: 255.255.255.0 ou os endereços de 198.51.100.0 a 198.51.100.255
+Ela consiste de um endereço IP seguido de uma "/" e um número decimal. Este número decimal representa o número de bits pré-alocados para o prefixo da rede. Logo, 198.51.100.0/24 correspone à seguinte máscara de subrede: 255.255.255.0 ou os endereços de 198.51.100.0 a 198.51.100.255 , pois 24 bits correspondem aos 3 primeiros octetos do endereço IP.
 
 Para calcular quantos endereços estão disponíveis sob uma certa máscara basta usar a seguinte fórmula 2^(comp.do endereço-comp do prefixo). Existem [calculadoras online](https://mxtoolbox.com/subnetcalculator.aspx), que dão mais informações.
 

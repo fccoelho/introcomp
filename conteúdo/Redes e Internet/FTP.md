@@ -38,6 +38,9 @@ O cliente FTP possui diversos comandos que podem ser utilizados para navegar e t
 16. `prompt`: Ativa ou desativa a confirmação de transferência de arquivos.
 17. `hash`: Ativa ou desativa a exibição de um hash de progresso durante a transferência de arquivos.
 18. `status`: Mostra o status da conexão com o servidor.
+## Exercicios
+    1. Utilize o cliente FTP para acessar o servidor ftp.datasus.gov.br e baixar o arquivo `dissemin/publicos/Dados_Abertos/SINAN/DIC_DADOS_CHIKUNGUNYA_fev2024.pdf` para o seu computador.
+    2. Usando apenas ferramentas do terminal do Linux, extraia o texto do PDF e descubra quais campos da tabela de Chikungunya estão associadas com a "Dengue".
 
 ## Referências
 - [FTP - Wikipedia](https://en.wikipedia.org/wiki/File_Transfer_Protocol)
