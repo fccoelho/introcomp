@@ -94,7 +94,7 @@ h1 p {
     color: orange;
     font-size: 12px;
 }
-´´´
+```
 
 ## Exercícios
 1. Crie um documento HTML com um título e um parágrafo, e defina estilos para o título e o parágrafo utilizando CSS.
