@@ -36,16 +36,18 @@ def embarque(elv=0):
             if destino not in elv['chamadas']:
                 elv['chamadas'].append(destino)
             sim['fila'] -= 1
+            EMBARCADOS += 1
+            elv['npass'] = len(elv['passageiros'])
             if sim['fila'] == 0:
                 break
-            EMBARCADOS += 1
         else:
             if FILAS_DE_ANDAR[andar] == 0:
                 return
             elv['passageiros'].append(0)
             FILAS_DE_ANDAR[andar] -= 1
+            elv['npass'] = len(elv['passageiros'])
         npass += 1
-        elv['npass'] = npass
+
 
 
 def escolhe_destino():
@@ -66,12 +68,13 @@ def desembarque(elevador):
     """
     global DESEMBARCADOS
     andar = elevador['andar']
-    for i,p in enumerate(elevador['passageiros']):
-        if p == andar:
-            elevador['passageiros'].pop(i)
-            DESEMBARCADOS += 1
-        if andar != 0:
-            POPULAÇÃO[andar] += 1
+    pass_saindo = elevador['passageiros'].count(andar)
+    if pass_saindo > 0:
+        for i in range(pass_saindo):
+            elevador['passageiros'].remove(andar)
+            if andar != 0:
+                POPULAÇÃO[andar] += 1
+                DESEMBARCADOS += 1 # não conto desembarques no térreo
 
     elevador['npass'] = len(elevador['passageiros'])
 
@@ -94,10 +97,10 @@ eventos ={
 
 def init_sim():
     ## Elevadores
-    estado_e1 = dict(ci_elv)
-    estado_e2 = dict(ci_elv)
+    estado_e1 = dict([('andar_ant',0),('andar', 0), ('npass', 0), ('passageiros',[]), ('direção', 0), ('chamadas', [])])
+    estado_e2 = dict([('andar_ant',0),('andar', 0), ('npass', 0), ('passageiros',[]), ('direção', 0), ('chamadas', [])])
     # simulação
-    estado_sim = dict(ci_sim)
+    estado_sim = dict([('fila', 0), ('energia', 0.0), ('viagens', 0)])
     for i in range(1,ANDARES+1):
         POPULAÇÃO[i]
     return (estado_e1,estado_e2),estado_sim
@@ -112,10 +115,11 @@ def atualiza_chamadas(andar=0):
     Adiciona destinos aos elevadores
     :param andar:
     """
-    if andar not in elevadores[0]['chamadas']:
-        elevadores[0]['chamadas'].append(andar)
-    if andar not in elevadores[1]['chamadas']:
-        elevadores[1]['chamadas'].append(andar)
+    for elv in elevadores:
+        if elv['andar'] == andar:
+            continue
+        if andar not in elv['chamadas']:
+            elv['chamadas'].append(andar)
 
 
 def move(elv):
@@ -130,6 +134,7 @@ def move(elv):
     elv['direção'] = 1 if destino > elv['andar'] else -1
     elv['andar_ant'] = elv['andar']
     elv['andar'] = destino
+    elv['chamadas'].remove(destino)
 
 
 def saidas():
@@ -149,6 +154,8 @@ def loop_de_evento(n):
         gera_fila()
         operação()
         saidas()
+        if sim['fila'] > 0:
+            atualiza_chamadas(0) # Chama os elevadores para o andar 0 caso tenha fila
         if i>n:
             break
         CICLOS += 1
