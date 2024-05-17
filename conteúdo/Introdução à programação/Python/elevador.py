@@ -1,24 +1,21 @@
 '''
-fila para benchmark:
-fila = [2, 2, 1, 1, 3, 1, 2, 2, 3, 2, 1, 1, 2, 3, 1, 1, 3, 2, 3, 3, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 3, 1, 1, 1, 1, 3, 2, 1, 2, 1, 3, 3, 1, 3, 3, 1, 2, 3, 2, 2, 3, 1, 2, 3, 1, 3, 2, 2, 1, 3, 2, 3, 2, 1, 1, 1, 2, 2, 3, 1, 1, 1, 3, 3, 2, 1, 1, 3, 3, 2, 3, 3, 1, 1, 3, 2, 3, 3, 1, 1, 1, 2, 2, 3, 1, 2, 3, 2, 1]
-def gera_filas_bench(i):
-    return fila [i]
+https://code-with-me.global.jetbrains.com/jHijHdtv71P8UUyG-748bQ#p=PC&fp=695EB8B2B16D8C3DBFCBDAF1FD27AFFDBC7554A5160BE613A9AA14E22EAF0916&newUi=true
 '''
 import random
 from collections import defaultdict
 import time
+from matplotlib import pyplot as plt
 
 LOTACAO = 8
 ANDARES = 14
 POPULAÇÃO = defaultdict(lambda :0)
 FILAS_DE_ANDAR = defaultdict(lambda : 0)
-DESEMBARCADOS = 0
-EMBARCADOS = 0
+DESEMBARCADOS = 0 # Numero de pessoas entregues em andares != térreo
+EMBARCADOS = 0 # numero total de pessoas que pegaram elevadores durante a simulação
 CICLOS = 0
+ANDARES_PERCORRIDOS = 0
 
-## variáveis de estado
-ci_elv = [('andar_ant',0),('andar', 0), ('npass', 0), ('passageiros',[]), ('direção', 0), ('chamadas', [])]
-ci_sim = [('fila', 0), ('energia', 0.0), ('viagens', 0)]
+
 
 
 ## API do elevador
@@ -112,7 +109,12 @@ def gera_fila():
     n = random.randint(1,3)
     sim['fila'] += n
 
-
+def gera_fila_bench(i):
+    fila = [2, 2, 1, 1, 3, 1, 2, 2, 3, 2, 1, 1, 2, 3, 1, 1, 3, 2, 3, 3, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 3, 1,
+            1, 1, 1, 3, 2, 1, 2, 1, 3, 3, 1, 3, 3, 1, 2, 3, 2, 2, 3, 1, 2, 3, 1, 3, 2, 2, 1, 3, 2, 3, 2, 1, 1,
+            1, 2, 2, 3, 1, 1, 1, 3, 3, 2, 1, 1, 3, 3, 2, 3, 3, 1, 1, 3, 2, 3, 3, 1, 1, 1, 2, 2, 3, 1, 2, 3, 2, 1, 3]
+    # print(i)
+    sim['fila'] += fila[i]
 def atualiza_chamadas(andar=0):
     """
     Adiciona destinos aos elevadores
@@ -130,6 +132,7 @@ def move(elv):
     Determina destino do elevador
     :param elv: Elevador
     """
+    global ANDARES_PERCORRIDOS
     if not elv['chamadas']:
         return
     distancias = [abs(elv['andar']- c) for c in elv['chamadas']]
@@ -138,6 +141,7 @@ def move(elv):
     elv['andar_ant'] = elv['andar']
     elv['andar'] = destino
     elv['chamadas'].remove(destino)
+    ANDARES_PERCORRIDOS += abs(elv['andar'] - elv['andar_ant'])
 
 
 def saidas():
@@ -153,20 +157,48 @@ def saidas():
 def loop_de_evento(n):
     global CICLOS
     i=0
+    entregas = []
     while True:
-        gera_fila()
+        # gera_fila()
+        gera_fila_bench(i)
         operação()
         saidas()
         if sim['fila'] > 0:
             atualiza_chamadas(0) # Chama os elevadores para o andar 0 caso tenha fila
-        if i>n:
+        if i == n:
             break
         CICLOS += 1
         i += 1
-        print(f"{i}:Tamanho da fila: {sim['fila']}; Embarcados: {EMBARCADOS}; Desembarcados: {DESEMBARCADOS}\r",end="")
+        entregas.append(DESEMBARCADOS)
+        if i < n:
+            print(f"{i}:Tamanho da fila: {sim['fila']}; Embarcados: {EMBARCADOS}; Desembarcados: {DESEMBARCADOS}; Andares Percorridos: {ANDARES_PERCORRIDOS}\r",end="" )
+        else:
+            eficiência = DESEMBARCADOS / ANDARES_PERCORRIDOS
+            print(f"{i}:Tamanho da fila: {sim['fila']}; Embarcados: {EMBARCADOS}; Desembarcados: {DESEMBARCADOS}; Andares Percorridos: {ANDARES_PERCORRIDOS}; Eficiência: {eficiência}")
 
+    return entregas, eficiência
 
 
 if __name__ == "__main__":
     elevadores, sim = init_sim()
-    loop_de_evento(100)
+    entregas=[]
+    eficiências=[]
+    n = 100
+    loop_de_evento(n)
+    # for i in range(100):
+    #     en,ef = loop_de_evento(100)
+    #     entregas.append(en)
+    #     eficiências.append(ef)
+    #     DESEMBARCADOS = 0  # Numero de pessoas entregues em andares != térreo
+    #     EMBARCADOS = 0  # numero total de pessoas que pegaram elevadores durante a simulação
+    #     CICLOS = 0
+    #     ANDARES_PERCORRIDOS = 0
+    #
+    # print(elevadores)
+    # plt.plot(entregas)
+    # plt.title("Passageiros Entregues a cada ciclo")
+    # plt.xlabel("ciclos")
+    # plt.figure()
+    # plt.hist(eficiências)
+    # plt.xlabel("Eficiência")
+    # plt.show()
