@@ -1,5 +1,8 @@
 '''
-https://code-with-me.global.jetbrains.com/jHijHdtv71P8UUyG-748bQ#p=PC&fp=695EB8B2B16D8C3DBFCBDAF1FD27AFFDBC7554A5160BE613A9AA14E22EAF0916&newUi=true
+fila para benchmark:
+fila = [2, 2, 1, 1, 3, 1, 2, 2, 3, 2, 1, 1, 2, 3, 1, 1, 3, 2, 3, 3, 2, 2, 2, 2, 1, 1, 2, 1, 1, 1, 2, 3, 1, 1, 1, 1, 3, 2, 1, 2, 1, 3, 3, 1, 3, 3, 1, 2, 3, 2, 2, 3, 1, 2, 3, 1, 3, 2, 2, 1, 3, 2, 3, 2, 1, 1, 1, 2, 2, 3, 1, 1, 1, 3, 3, 2, 1, 1, 3, 3, 2, 3, 3, 1, 1, 3, 2, 3, 3, 1, 1, 1, 2, 2, 3, 1, 2, 3, 2, 1]
+def gera_filas_bench(i):
+    return fila [i]
 '''
 import random
 from collections import defaultdict
