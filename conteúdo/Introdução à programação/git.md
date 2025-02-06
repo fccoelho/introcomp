@@ -1,4 +1,4 @@
-dusdsds# Git, Github e Versionamento:
+# Git, Github e Versionamento:
 
 O Git é um sistema de versionamento distribuído que é usado pela vasta maioria de projetos de desenvolvimento globalmente. O GitHub, é uma aplicação Web que facilita a colaboração em projetos versionados pelo `git`.
 
