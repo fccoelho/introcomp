@@ -2,7 +2,7 @@
 Esta lista pode ser re-utilizada para as várias linguagens de programação que vamos visitar: Basic, Shell e Python
 
 1. Crie um programa simples para imprimir “Hello, world!”
-1. Crie um programa simples para encontrar a média de dois números.
+1. Crie um programa que implemente uma calculadora simples com as operações de adição, subtração, multiplicação, divisão e potência.
 2. Crie um programa para calcular a área de um círculo
 3. Crie um programa para encontrar a soma de uma série de números
 4. Escreva um programa para ordenar uma lista de números
