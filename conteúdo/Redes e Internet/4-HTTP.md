@@ -85,4 +85,10 @@ Para acessar o servidor, basta rodar o seguinte código cliente:
 import requests
 response = requests.get('http://localhost:8000')
 print(response.text)
+``` 
+
+Se você estiver executando este servidor web em um terminal remoto, você poder acessá-lo através de um navegador de terminal, como o lynx, por exemplo:
+    
+```bash 
+lynx http://localhost:8080
 ```
