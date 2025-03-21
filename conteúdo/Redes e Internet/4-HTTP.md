@@ -78,3 +78,11 @@ server = HTTPServer(('localhost', 8000), MyHandler)
 server.serve_forever()
 ``` 
 Nesse exemplo, criamos uma classe `MyHandler` que herda da classe `BaseHTTPRequestHandler`. A classe `MyHandler` define o método `do_GET`, que é chamado quando uma requisição GET é feita para o servidor. O método `do_GET` envia uma resposta HTTP 200 OK, define o cabeçalho `Content-type` como `text/html`, e escreve o conteúdo da página HTML no arquivo `wfile`.
+
+Para acessar o servidor, basta rodar o seguinte código cliente:
+
+```python
+import requests
+response = requests.get('http://localhost:8000')
+print(response.text)
+```
