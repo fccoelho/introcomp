@@ -1,0 +1,7 @@
+# Informação Analógica vs Digital
+Os computadores digitais, o tipo mais comum usado atualmente,  são máquinas que operam com informações digitais, ou seja, com valores discretos, enquanto os computadores analógicos operam com informações analógicas, ou seja, com valores contínuos. A diferença entre informação analógica e digital é fundamental para entender como os computadores funcionam e como eles processam informações.
+## Convertendo entre analógico e Digital
+A conversão de sinais analógicos para digitais e vice-versa é um processo fundamental em muitas aplicações de computação e eletrônica. A conversão de sinais analógicos para digitais é feita por um conversor analógico-digital (ADC), que mede a amplitude do sinal analógico em intervalos regulares e converte esses valores em números digitais. A conversão de sinais digitais para analógicos é feita por um conversor digital-analógico (DAC), que converte números digitais em sinais analógicos correspondentes. Esta conversão é conhecida como 
+[ADC](https://en.wikipedia.org/wiki/Analog-to-digital_converter) 
+ 
+A conversão inversa, chamada [DAC](https://en.wikipedia.org/wiki/Digital-to-analog_converter), é feita por um conversor digital-analógico (DAC), que converte números digitais em sinais analógicos correspondentes. Esta conversão requer a interpolação dos valores digitais para produzir um sinal analógico suave e contínuo.
