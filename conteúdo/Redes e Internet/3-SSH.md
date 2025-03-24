@@ -52,9 +52,16 @@ ssh usuario@localhost ls
 
 
 ### Túneis SSH
-O SSH também pode ser utilizado para criar túneis seguros entre dois dispositivos. Isso permite que portas de um servidor sejam mapeadas para portas locais, permitindo o acesso a serviços remotos de forma segura. Para criar um túnel SSH, basta digitar o comando `ssh` seguido do argumento `-L` e das portas que você deseja mapear. Por exemplo, para mapear a porta 8080 do servidor para a porta 80 do cliente, basta digitar o comando abaixo.
+O SSH também pode ser utilizado para criar túneis seguros entre dois dispositivos. Isso permite que portas de um servidor sejam mapeadas para portas locais, permitindo o acesso a serviços remotos de forma segura. Para criar um túnel SSH, basta digitar o comando `ssh` seguido do argumento `-L` e das portas que você deseja mapear. Por exemplo, para mapear a porta 8000 do servidor para a porta 80 do cliente, basta digitar o comando abaixo.
 
 ```bash
-ssh -L 8080:localhost:80 -f -NC usuario@servidor.remoto
+ssh -L 80:localhost:8000 -f -NC usuario@servidor.remoto
 ```
 a opção `-f` faz com que o ssh seja executado em segundo plano, e a opção `-N` faz com que nenhum comando seja executado no servidor remoto. A opção `-C` ativa a compressão dos dados, o que pode melhorar o desempenho em conexões lentas.
+
+O tunelamento também pode ser feito de forma reversa, mapeando portas locais para portas remotas. Para isso, basta utilizar o argumento `-R` no comando `ssh`. Por exemplo, para mapear a porta 80 do cliente para a porta 8000 do servidor, basta digitar o comando abaixo.
+
+```bash
+ssh -R 8000:localhost:80 -f -NC usuario@servidor.remoto
+```
+
