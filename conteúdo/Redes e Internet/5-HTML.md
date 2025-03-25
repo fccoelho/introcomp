@@ -19,6 +19,8 @@ Um documento HTML é composto por uma série de elementos, que são utilizados p
 </html>
 ```
 
+Vá no [editor online](https://www.w3schools.com/html/html_editor.asp) e digite o código acima. Clique em "Run" para visualizar o resultado.
+
 ### Elementos HTML Mais Comuns
 Abaixo estão listados alguns dos elementos HTML mais comuns, que são utilizados para definir o conteúdo de uma página web.
 1. `<!DOCTYPE html>`: Define o tipo de documento HTML.
