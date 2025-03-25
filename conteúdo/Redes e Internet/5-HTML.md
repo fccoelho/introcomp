@@ -98,6 +98,48 @@ h1 p {
 }
 ```
 
+Para usar o CSS criado em uma página HTML, basta adicionar o código CSS entre as tags `<style>` no cabeçalho do documento HTML. Abaixo está um exemplo de como adicionar um estilo CSS a um documento HTML.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título da Página</title>
+    <style>
+        h1 {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título da Página</h1>
+    <p>Este é um parágrafo.</p>
+</body>
+</html>
+```
+
+O CSS pode ser adicionado a um documento HTML de três maneiras diferentes:
+1. Inline: O CSS é adicionado diretamente ao elemento HTML, utilizando o atributo `style`.
+2. Interno: O CSS é adicionado no cabeçalho do documento HTML, entre as tags `<style>`. 
+3. Externo: O CSS é adicionado em um arquivo separado, e é referenciado no documento HTML utilizando a tag `<link>`.
+
+Um exemplo de uso de CSS externo é mostrado abaixo:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título da Página</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <h1>Título da Página</h1>
+    <p>Este é um parágrafo.</p>
+</body>
+</html>
+```
+
+
 ## Exercícios
 1. Crie um documento HTML com um título e um parágrafo, e defina estilos para o título e o parágrafo utilizando CSS.
 2. Crie um documento HTML com uma lista não ordenada e uma lista ordenada, e defina estilos para as listas utilizando CSS.
