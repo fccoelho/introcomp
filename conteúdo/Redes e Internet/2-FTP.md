@@ -38,6 +38,38 @@ O cliente FTP possui diversos comandos que podem ser utilizados para navegar e t
 16. `prompt`: Ativa ou desativa a confirmação de transferência de arquivos.
 17. `hash`: Ativa ou desativa a exibição de um hash de progresso durante a transferência de arquivos.
 18. `status`: Mostra o status da conexão com o servidor.
+
+## Criando um servidor FTP
+Em sua máquina local, você pode criar um servidor FTP para compartilhar arquivos com outros dispositivos. Para isso, você pode instalar um servidor FTP como o `vsftpd` e configurá-lo para compartilhar arquivos. Para instalar o `vsftpd`, basta digitar o comando abaixo.
+
+```bash
+sudo apt install vsftpd
+```
+
+Após a instalação, você pode configurar o servidor editando o arquivo de configuração `/etc/vsftpd.conf`. Você pode configurar o servidor para permitir conexões anônimas, definir o diretório raiz do servidor, definir as permissões de leitura e escrita, entre outras configurações. Modifique as seguintes configurações:
+```bash
+anonymous_enable=YES
+local_enable=YES
+write_enable=YES
+anon_root=/var/ftp
+```
+Pode ser necessário criar o diretório raiz do servidor e definir as permissões corretas. Para isso, basta digitar os comandos abaixo.
+
+```bash
+sudo mkdir /var/ftp
+sudo chown nobody:nogroup /var/ftp
+sudo chmod a-w /var/ftp
+```
+
+
+Após configurar o servidor, você pode reiniciá-lo com o comando abaixo.
+
+```bash
+sudo service vsftpd restart
+```
+
+Para acessar o servidor, basta digitar o endereço do servidor no navegador ou em um cliente FTP, e autenticar-se com o usuário `anonymous` e senha "". Você pode transferir arquivos para o servidor utilizando um cliente FTP como o `ftp` ou o `FileZilla`.
+
 ## Exercicios
     1. Utilize o cliente FTP para acessar o servidor ftp.datasus.gov.br e baixar o arquivo `dissemin/publicos/Dados_Abertos/SINAN/DIC_DADOS_CHIKUNGUNYA_fev2024.pdf` para o seu computador.
     2. Usando apenas ferramentas do terminal do Linux, extraia o texto do PDF e descubra quais campos da tabela de Chikungunya estão associadas com a "Dengue".

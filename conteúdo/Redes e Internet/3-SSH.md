@@ -65,3 +65,18 @@ O tunelamento também pode ser feito de forma reversa, mapeando portas locais pa
 ssh -R 8000:localhost:80 -f -NC usuario@servidor.remoto
 ```
 
+## Multiplexação de terminais
+Quando estamos em uma conexão SSH, podemos abrir vários terminais em uma única conexão. Isso é feito através do uso de multiplexadores de terminais. Vamos usar o `byobu` como exemplo. Para instalar o `byobu`, basta digitar o comando abaixo.
+
+```bash
+sudo apt install byobu
+```
+
+Para iniciar o `byobu`, basta digitar o comando abaixo.
+
+```bash
+byobu
+```
+
+O `byobu` permite que você abra vários terminais em uma única conexão SSH, o que pode ser muito útil para gerenciar vários processos em um servidor remoto. Para criar uma nov shell no `byobu`, basta digitar `F2`. Para alternar entre as janelas, basta digitar  `F3` e `F4`. Para sair do `byobu`, mantendo as sessões ativas, basta digitar`F6`. Ao reiniciar a conexão SSH, basta digitar o comando `byobu` para restaurar as sessões ativas.
+
