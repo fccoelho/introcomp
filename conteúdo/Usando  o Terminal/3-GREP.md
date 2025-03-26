@@ -72,3 +72,28 @@ Considere o exemplo abaixo usando o arquivo `dados.csv`. Este aquivo conté as s
 $ cut -d, -f1,4 dados.csv
 ```
 O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-d,` indica que o delimitador das colunas é a vírgula. A opção `-f1,4` indica que as colunas 1 e 4 devem ser extraídas. Como este comando pode ser melhorado?
+
+## Alternativas ao GREP
+O GREP é uma ferramenta poderosa para buscar padrões em arquivos de texto, mas existem outras ferramentas que podem ser utilizadas para realizar buscas em arquivos de texto. Alguns exemplos são o `awk` e o `sed`.
+
+### O comando AWK
+O comando `awk` é uma ferramenta poderosa para processar e analisar arquivos de texto. Ele é muito útil para extrair informações de arquivos de texto, como por exemplo, extrair o nome de um usuário de um arquivo de log, ou para extrair dados de uma arquivo CSV. O comando `awk` é composto por padrões e ações. Os padrões são expressões que indicam quando a ação deve ser executada, e as ações são comandos que são executados quando o padrão é satisfeito.
+
+Considere o exemplo abaixo usando o arquivo `dados.csv`. Este arquivo contém as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos extrair o valor do indicador para o ano de 1960.
+```bash
+$ awk -F, '{print $1,$4}' dados.csv
+```
+O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-F,` indica que o delimitador das colunas é a vírgula. O comando `{print $1,$4}` indica que as colunas 1 e 4 devem ser impressas. Como este comando pode ser melhorado?
+
+### o comando ripgrep
+O [`ripgrep`](https://github.com/burntsushi/ripgrep) é uma alternativa ao `grep`. Ele é muito mais rápido que o `grep` e possui uma sintaxe mais amigável. Você pode instalar o `ripgrep` utilizando o gerenciador de pacotes da sua distribuição Linux. Por exemplo, no Ubuntu, você pode instalar o `ripgrep` utilizando o comando abaixo:
+```bash
+$ sudo apt install ripgrep
+```
+
+Explore o [tutorial do ripgrep](https://codapi.org/try/ripgrep/) para aprender mais sobre o `ripgrep`.
+
+
+
+# Exercícios
+1. Reproduza os exemplos acima no seu terminal, usando o ripgrep. e compare os tempos de execução.
