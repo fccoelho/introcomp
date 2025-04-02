@@ -95,6 +95,8 @@ awk '/cargo/ {print "Cargo: " $0}' 1.text
 
 O comando acima extrai os campos do cabeçalho do arquivo `1.text`. A expressão regular `/title/` indica que a linha que contém a palavra "title" deve ser impressa. A expressão `{print "Nome: " $2, $3}` indica que o campo "title" deve ser impresso. O mesmo é feito para os campos "natureza", "sexo" e "cargo".
 
+Para aprofundar seus conhecimentos sobre o comando `awk`, consulte o [tutorial do awk](https://www.tutorialspoint.com/awk/awk_basic_examples.htm).
+
 
 
 ### O comando `tr`
