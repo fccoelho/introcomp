@@ -19,43 +19,50 @@ teste teste
 ### Usando o GREP para encontrar padrões em arquivos
 O GREP pode ser utilizado para encontrar padrões em arquivos de texto. Por exemplo, se você deseja encontrar a palavra "teste" em um arquivo chamado `arquivo.txt`, você pode utilizar o comando abaixo:
 ```bash
-$ grep "teste" GREP.md
+$ grep "teste" 3-GREP.md
 ```
-Um exemplo mais avançado é buscar por linhas que não contém a palavra "teste" em um arquivo chamado `GREP.md`:
+Um exemplo mais avançado é buscar por linhas que não contém a palavra "teste" em um arquivo chamado `3-GREP.md`:
 ```bash
-$ grep -v "teste" GREP.md
+$ grep -v "teste" 3-GREP.md
 ```
 
 ### Usando o GREP para encontrar padrões em arquivos e exibir o número da linha
 O GREP pode ser utilizado para encontrar padrões em arquivos de texto e exibir o número da linha. Por exemplo, se você deseja encontrar a palavra "teste" em um arquivo chamado `arquivo.txt` e exibir o número da linha, você pode utilizar o comando abaixo:
 ```bash
-$ grep -n "teste" GREP.md
+$ grep -n "teste" 3-GREP.md
 ```
 
 ### Usando o GREP para encontrar linhas que terminem com uma palavra específica
-O GREP pode ser utilizado para encontrar linhas que terminem com uma determinada palavra. Por exemplo, se você deseja encontrar linhas que terminem com a palavra "linha" em um arquivo chamado `GREP.md`, você pode utilizar o comando abaixo:
+O GREP pode ser utilizado para encontrar linhas que terminem com uma determinada palavra. Por exemplo, se você deseja encontrar linhas que terminem com a palavra "linha" em um arquivo chamado `3-GREP.md`, você pode utilizar o comando abaixo:
 ```bash
-$ grep "linha$" GREP.md
+$ grep "linha$" 3-GREP.md
 ```
 
 ### Usando o GREP para encontrar linhas que iniciem com uma palavra específica
 O GREP pode ser utilizado para encontrar linhas que iniciem com uma determinada palavra 'linha', por exemplo. 
 ```bash
-$ grep "^linha" GREP.md
+$ grep "^linha" 3-GREP.md
 ```
 
 ### Usando o GREP para encontrar linhas que iniciem com uma palavra específica e terminem com outra
 O GREP pode ser utilizado para encontrar linhas que iniciem com uma determinada palavra 'Usando', por exemplo, e terminem com a palavra "específica". 
 ```bash
-$ grep "^linha.*específica" GREP.md
+$ grep "^linha.*específica" 3-GREP.md
 ```
 
 ### Usando o GREP para encontrar padrões repetidos em arquivos
 O GREP pode ser utilizado para encontrar padrões repetidos em arquivos de texto. Por exemplo, se você deseja encontrar a palavra "teste" repetida em um arquivo chamado `arquivo.txt`, você pode utilizar o comando abaixo:
 ```bash
-$ grep -En "(que ){1,2}" GREP.md
+$ grep -En "(que ){1,2}" 3-GREP.md
 ```
 A opção `-E` permite que o GREP utilize expressões regulares estendidas. A opção `-n` permite que o GREP exiba o número da linha. A expressão regular `(que ){1,2}` indica que a palavra "que" deve ser repetida de 1 a 2 vezes.
+
+Se quisermos contar quantas vezes a palavra "que" aparece em cada linha do arquivo, podemos usar o comando abaixo:
+```bash
+$ egrep -o "(que )+" 3-GREP.md | wc -l
+```
+A opção `-o` permite que o GREP exiba apenas o padrão encontrado. A expressão regular `(que )+` indica que a palavra "que" deve ser repetida uma ou mais vezes. O comando `wc -l` conta o número de linhas.
+
 
 ### Combinando comandos do GREP com o sed
 O GREP pode ser combinado com o comando `sed` para realizar substituições em arquivos de texto. Por exemplo, se você deseja substituir a palavra "teste" pela palavra "exemplo" em um arquivo chamado `dados.csv`, você pode utilizar o comando abaixo:
