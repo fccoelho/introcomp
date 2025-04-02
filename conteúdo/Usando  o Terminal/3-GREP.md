@@ -71,14 +71,7 @@ $ sed "s/BRA/BR/g" dados.csv | grep -c "BR"
 ```
 o exemplo acima substitui a palavra "BRA" pela palavra "BR" e conta quantas vezes a palavra "BR" aparece no arquivo.
 
-## O comando CUT
-O comando `cut` é um comando do sistema operacional Unix que é utilizado para extrair seções de linhas de arquivos de texto. Ele é muito útil para extrair informações de arquivos de texto, como por exemplo, extrair o nome de um usuário de um arquivo de log, ou para extrair dados de uma arquivo CSV. 
 
-Considere o exemplo abaixo usando o arquivo `dados.csv`. Este aquivo conté as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos extrair o valor do indicador para o ano de 1960.
-```bash
-$ cut -d, -f1,4 dados.csv
-```
-O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-d,` indica que o delimitador das colunas é a vírgula. A opção `-f1,4` indica que as colunas 1 e 4 devem ser extraídas. Como este comando pode ser melhorado?
 
 ## Alternativas/Complementos ao GREP
 O GREP é uma ferramenta poderosa para buscar padrões em arquivos de texto, mas existem outras ferramentas que podem ser utilizadas para realizar buscas em arquivos de texto. Alguns exemplos são o `awk` e o `sed`.
@@ -92,6 +85,17 @@ $ awk -F, '{print $1,$4}' dados.csv
 ```
 O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-F,` indica que o delimitador das colunas é a vírgula. O comando `{print $1,$4}` indica que as colunas 1 e 4 devem ser impressas. 
 
+Os arquivos 1.text, 2.text e 3.text são verbetes do dicionário Histórico e Biográfico Brasileiro. o cabeçalho destes documentos contémo os seguintes campos: "title", "natureza", "sexo" e "cargo". Queremos extrair os campos do cabeçalho dos arquivos, com seus valores. Usando o comando `awk`, podemos extrair os campos do cabeçalho dos arquivos da seguinte forma:
+```bash
+awk '/title/ {print "Nome: " $2, $3}' 1.text
+awk '/natureza/ {print "Natureza: " $2}' 1.text
+awk '/sexo/ {print "Sexo: " $2}' 1.text
+awk '/cargo/ {print "Cargo: " $0}' 1.text
+```
+
+O comando acima extrai os campos do cabeçalho do arquivo `1.text`. A expressão regular `/title/` indica que a linha que contém a palavra "title" deve ser impressa. A expressão `{print "Nome: " $2, $3}` indica que o campo "title" deve ser impresso. O mesmo é feito para os campos "natureza", "sexo" e "cargo".
+
+
 
 ### O comando `tr`
 O comando `tr` é uma ferramenta poderosa para traduzir ou apagar caracteres em arquivos de texto. Ele é muito útil para substituir caracteres em arquivos de texto, como por exemplo, substituir acentos por caracteres sem acento, ou substituir espaços por tabs. O comando `tr` é composto por um conjunto de caracteres que indicam quais caracteres devem ser traduzidos ou apagados.
@@ -104,18 +108,16 @@ $ tr ',' ';' < dados.csv
 
 O comando acima substitui a vírgula por um ponto-e-vírgula no arquivo `dados.csv`. O comando `<` indica que o arquivo `dados.csv` deve ser utilizado como entrada para o comando `tr`.
 
-### O comando `cut`
-O comando `cut` permite extrair seções de linhas de arquivos de texto. Ele é muito útil para extrair informações de arquivos de texto, como por exemplo, extrair o nome de um usuário de um arquivo de log, ou para extrair dados de uma arquivo CSV. O comando `cut` é composto por opções que indicam quais colunas devem ser extraídas.
 
-Por exemplo, considere o arquivo `dados.csv`. Este arquivo contém as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos extrair as colunas 1 e 4 do arquivo `dados.csv` como fizemos anteriormente com o GREP.
 
+### O comando CUT
+O comando `cut` é um comando do sistema operacional Unix que é utilizado para extrair seções de linhas de arquivos de texto. Ele é muito útil para extrair informações de arquivos de texto, como por exemplo, extrair o nome de um usuário de um arquivo de log, ou para extrair dados de uma arquivo CSV. 
+
+Considere o exemplo abaixo usando o arquivo `dados.csv`. Este aquivo conté as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos extrair o valor do indicador para o ano de 1960.
 ```bash
 $ cut -d, -f1,4 dados.csv
 ```
-
-Os arquivos 1.text, 2.text e 3.text são verbetes do dicionário Histórico e Biográfico Brasileiro. o cabeçalho destes documentos contémo os seguintes campos: "title", "natureza", "sexo" e "cargo". Queremos extrair os campos do cabeçalho dos arquivos, com seus valores.
-
-
+O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-d,` indica que o delimitador das colunas é a vírgula. A opção `-f1,4` indica que as colunas 1 e 4 devem ser extraídas. Como este comando pode ser melhorado?
 
 
 ### o comando ripgrep
