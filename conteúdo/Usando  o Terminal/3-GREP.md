@@ -73,7 +73,7 @@ $ cut -d, -f1,4 dados.csv
 ```
 O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-d,` indica que o delimitador das colunas é a vírgula. A opção `-f1,4` indica que as colunas 1 e 4 devem ser extraídas. Como este comando pode ser melhorado?
 
-## Alternativas ao GREP
+## Alternativas/Complementos ao GREP
 O GREP é uma ferramenta poderosa para buscar padrões em arquivos de texto, mas existem outras ferramentas que podem ser utilizadas para realizar buscas em arquivos de texto. Alguns exemplos são o `awk` e o `sed`.
 
 ### O comando AWK
@@ -83,7 +83,33 @@ Considere o exemplo abaixo usando o arquivo `dados.csv`. Este arquivo contém as
 ```bash
 $ awk -F, '{print $1,$4}' dados.csv
 ```
-O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-F,` indica que o delimitador das colunas é a vírgula. O comando `{print $1,$4}` indica que as colunas 1 e 4 devem ser impressas. Como este comando pode ser melhorado?
+O comando acima extrai as colunas 1 e 4 do arquivo `dados.csv`. A opção `-F,` indica que o delimitador das colunas é a vírgula. O comando `{print $1,$4}` indica que as colunas 1 e 4 devem ser impressas. 
+
+
+### O comando `tr`
+O comando `tr` é uma ferramenta poderosa para traduzir ou apagar caracteres em arquivos de texto. Ele é muito útil para substituir caracteres em arquivos de texto, como por exemplo, substituir acentos por caracteres sem acento, ou substituir espaços por tabs. O comando `tr` é composto por um conjunto de caracteres que indicam quais caracteres devem ser traduzidos ou apagados.
+
+Considere o exemplo abaixo usando o arquivo `dados.csv`. Este arquivo contém as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos substituir a vírgula por um caracter ponto-e-vírgula. 
+
+```bash
+$ tr ',' ';' < dados.csv
+```
+
+O comando acima substitui a vírgula por um ponto-e-vírgula no arquivo `dados.csv`. O comando `<` indica que o arquivo `dados.csv` deve ser utilizado como entrada para o comando `tr`.
+
+### O comando `cut`
+O comando `cut` permite extrair seções de linhas de arquivos de texto. Ele é muito útil para extrair informações de arquivos de texto, como por exemplo, extrair o nome de um usuário de um arquivo de log, ou para extrair dados de uma arquivo CSV. O comando `cut` é composto por opções que indicam quais colunas devem ser extraídas.
+
+Por exemplo, considere o arquivo `dados.csv`. Este arquivo contém as seguintes colunas: "Country Name","Country Code","Indicator Name","Indicator Code","1960","1961", ..., 2015. Queremos extrair as colunas 1 e 4 do arquivo `dados.csv` como fizemos anteriormente com o GREP.
+
+```bash
+$ cut -d, -f1,4 dados.csv
+```
+
+Os arquivos 1.text, 2.text e 3.text são verbetes do dicionário Histórico e Biográfico Brasileiro. o cabeçalho destes documentos contémo os seguintes campos: "title", "natureza", "sexo" e "cargo". Queremos extrair os campos do cabeçalho dos arquivos, com seus valores.
+
+
+
 
 ### o comando ripgrep
 O [`ripgrep`](https://github.com/burntsushi/ripgrep) é uma alternativa ao `grep`. Ele é muito mais rápido que o `grep` e possui uma sintaxe mais amigável. Você pode instalar o `ripgrep` utilizando o gerenciador de pacotes da sua distribuição Linux. Por exemplo, no Ubuntu, você pode instalar o `ripgrep` utilizando o comando abaixo:
@@ -97,3 +123,4 @@ Explore o [tutorial do ripgrep](https://codapi.org/try/ripgrep/) para aprender m
 
 # Exercícios
 1. Reproduza os exemplos acima no seu terminal, usando o ripgrep. e compare os tempos de execução.
+2. Os arquivos 1.text, 2.text e 3.text são verbetes do dicionário Histórico e Biográfico Brasileiro. Use os comandos aprendidos acima para extrair os campos do cabeçalho dos arquivos.
