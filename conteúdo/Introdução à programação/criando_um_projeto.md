@@ -1,5 +1,5 @@
 # Começando um projeto em Python do Zero
-Neste documento vamos aprender como começar um projeto Python.
+Neste documento vamos aprender como começar um projeto Python. Usando dois package managers, o `uv`, e o `poetry`.
 
 ## A ferramenta Poetry
 O [Poetry](https://python-poetry.org/) é uma ferramenta que facilita muito a criação e gerenciamento de um projeto. Nós vamos usa-la neste exercício. Para instalar o Poetry siga os passos [nesta página](https://python-poetry.org/docs/)
