@@ -1,0 +1,120 @@
+{
+ "cells": [
+  {
+   "metadata": {},
+   "cell_type": "raw",
+   "source": [
+    "# Jogo da Vida de Conway\n",
+    "O jogo da vida de Conway é um autômato celular, que foi concebido pelo matemático britânico John Horton Conway em 1970. O jogo é um exemplo de um sistema dinâmico que exibe padrões emergentes complexos. Apesar de suas regras simples, o jogo da vida é Turing completo e pode simular uma máquina universal de Turing.\n",
+    "\n",
+    "O Jogo da Vida pode ser descrito como um grid bidimensional infinito de células, cada uma das quais pode estar viva ou morta. Cada célula interage com seus oito vizinhos, que são as células que estão horizontal, vertical ou diagonalmente adjacentes. Em cada passo do tempo, as seguintes regras são aplicadas a cada célula:\n",
+    "1. Uma célula morta com exatamente três vizinhos vivos se torna uma célula viva.\n",
+    "2. Uma célula viva com dois ou três vizinhos vivos permanece viva.\n",
+    "3. Em todos os outros casos, uma célula viva morre ou permanece morta.\n",
+    "\n",
+    " Vamos implementar o Jogo da vida usando um array bidimensional para representar o grid. Cada célula será representada por um 0 se estiver morta e 1 se estiver viva. Vamos implementar uma função que recebe um grid inicial e o número de passos de tempo e retorna o grid após o número especificado de passos de tempo.\n",
+    " "
+   ],
+   "id": "a8266a341465e21e"
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "initial_id",
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import matplotlib.pyplot as plt\n"
+   ]
+  },
+  {
+   "metadata": {},
+   "cell_type": "code",
+   "outputs": [],
+   "execution_count": null,
+   "source": [
+    "def game_of_life(grid, steps):\n",
+    "    rows, cols = grid.shape\n",
+    "    new_grid = np.zeros((rows, cols))\n",
+    "    for _ in range(steps):\n",
+    "        for i in range(rows):\n",
+    "            for j in range(cols):\n",
+    "                neighbors = grid[max(i - 1, 0):min(i + 2, rows), max(j - 1, 0):min(j + 2, cols)]\n",
+    "                live_neighbors = np.sum(neighbors) - grid[i, j]\n",
+    "                if grid[i, j] == 1 and live_neighbors in [2, 3]:\n",
+    "                    new_grid[i, j] = 1\n",
+    "                elif grid[i, j] == 0 and live_neighbors == 3:\n",
+    "                    new_grid[i, j] = 1\n",
+    "        grid = new_grid.copy()\n",
+    "    return new_grid"
+   ],
+   "id": "477aad00275d031c"
+  },
+  {
+   "metadata": {},
+   "cell_type": "code",
+   "outputs": [],
+   "execution_count": null,
+   "source": [
+    "# implementação alternativa\n",
+    "def game_of_life2(grid, steps):\n",
+    "    for _ in range(steps):\n",
+    "        # Usa numpy.pad para adicionar uma borda de zeros ao redor do grid\n",
+    "        padded_grid = np.pad(grid, pad_width=1, mode='constant', constant_values=0)\n",
+    "        \n",
+    "        # Calcula o número de vizinhos vivos de cada célula\n",
+    "        neighbor_sum = sum(np.roll(np.roll(padded_grid, i, axis=0), j, axis=1)\n",
+    "                           for i in (-1, 0, 1) for j in (-1, 0, 1) if (i != 0 or j != 0))\n",
+    "        \n",
+    "        # Apply the rules of the game\n",
+    "        birth = (neighbor_sum==3) & (grid==0)\n",
+    "        survive = ((neighbor_sum==2) | (neighbor_sum==3)) & (grid==1)\n",
+    "        \n",
+    "        grid[:] = birth | survive\n",
+    "    return grid"
+   ],
+   "id": "e9dc586f8d38de3"
+  },
+  {
+   "metadata": {},
+   "cell_type": "markdown",
+   "source": [
+    "# Visualização do Jogo da Vida\n",
+    "Vamos testar a função com um grid inicial aleatório de 10x10 e 10 passos de tempo."
+   ],
+   "id": "c0a60c071436170b"
+  },
+  {
+   "metadata": {},
+   "cell_type": "code",
+   "outputs": [],
+   "execution_count": null,
+   "source": "",
+   "id": "a139288fe432079a"
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
