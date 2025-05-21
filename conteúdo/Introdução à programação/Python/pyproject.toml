@@ -9,4 +9,5 @@ dependencies = [
     "pandas>=2.2.3",
     "pyarrow>=20.0.0",
     "scipy>=1.15.3",
+    "sympy>=1.14.0",
 ]
