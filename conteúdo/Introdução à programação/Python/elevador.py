@@ -155,9 +155,10 @@ def saidas():
 
 
 def loop_de_evento(n):
-    global CICLOS
+    global CICLOS, elevadores, sim
     i=0
     entregas = []
+    elevadores, sim = init_sim()
     while True:
         # gera_fila()
         gera_fila_bench(i)
