@@ -247,8 +247,7 @@ def demonstrate_aliasing():
     ax1.plot(t_continuous*1000, original_signal, 'k-', linewidth=0.8, 
             label='Sinal Analógico Original', alpha=0.6)
     ax1.stem(t_sampled_ok*1000, sampled_ok, linefmt='g-', markerfmt='go', 
-            basefmt=' ', label=f'Amostras (fs={fs_adequate}Hz)', 
-            markerlineopts={'markersize': 3})
+            basefmt=' ', label=f'Amostras (fs={fs_adequate}Hz)')
     ax1.set_xlabel('Tempo (ms)')
     ax1.set_ylabel('Amplitude')
     ax1.set_title('Amostragem Adequada (fs > 2·f_max)')
@@ -263,8 +262,7 @@ def demonstrate_aliasing():
     ax2.plot(t_continuous*1000, aliased_signal, 'r--', linewidth=1.5, 
             label=f'Sinal Reconstruído ({f_alias} Hz) - ALIASING!')
     ax2.stem(t_sampled_bad*1000, sampled_bad, linefmt='b-', markerfmt='bo', 
-            basefmt=' ', label=f'Amostras (fs={fs_inadequate}Hz)', 
-            markerlineopts={'markersize': 3}, alpha=0.7)
+            basefmt=' ', label=f'Amostras (fs={fs_inadequate}Hz)')
     ax2.set_xlabel('Tempo (ms)')
     ax2.set_ylabel('Amplitude')
     ax2.set_title('Amostragem Inadequada (fs < 2·f_max) → ALIASING')
@@ -381,7 +379,7 @@ def demonstrate_anti_aliasing_filter():
     ax3 = axes[1, 0]
     ax3.plot(t*1000, signal_composite, 'k-', linewidth=0.5, alpha=0.4)
     ax3.stem(t_samples*1000, samples_original, linefmt='r-', markerfmt='ro', 
-            basefmt=' ', label='Amostras (SEM filtro)', markerlineopts={'markersize': 2})
+            basefmt=' ', label='Amostras (SEM filtro)')
     ax3.set_xlabel('Tempo (ms)')
     ax3.set_ylabel('Amplitude')
     ax3.set_title('Amostragem SEM Filtro → Aliasing de f₃=700Hz')
@@ -393,7 +391,7 @@ def demonstrate_anti_aliasing_filter():
     ax4 = axes[1, 1]
     ax4.plot(t*1000, signal_filtered, 'b-', linewidth=1, alpha=0.7)
     ax4.stem(t_samples*1000, samples_filtered, linefmt='g-', markerfmt='go', 
-            basefmt=' ', label='Amostras (COM filtro)', markerlineopts={'markersize': 2})
+            basefmt=' ', label='Amostras (COM filtro)')
     ax4.set_xlabel('Tempo (ms)')
     ax4.set_ylabel('Amplitude')
     ax4.set_title('Amostragem COM Filtro → Sem Aliasing')
