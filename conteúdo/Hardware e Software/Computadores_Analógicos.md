@@ -54,7 +54,7 @@ Esses dispositivos foram fundamentais para compreender os princípios de computa
 ### Referências Bibliográficas e Links
 
 1.  **Computer History Museum.** *Collection: Analog Computers.* Disponível em: <https://www.computerhistory.org/collections/analog-computers/>
-2.  **IEEE Annals of the History of Computing.** *The Differential Analyzer: A Legacy of Vannevar Bush.* Disponível em: <https://www.computer.org/csdl/magazine/ah/1996/04/h4014/13rRUxgj9O1>
+2.  **IEEE Annals of the History of Computing.** *The Differential Analyzer: A Legacy of Vannevar Bush.* Disponível em: <[https://www.computer.org/csdl/magazine/ah/1996/04/h4014/13rRUxgj9O1](https://www.computerhistory.org/collections/catalog/102680080/search/keyword:vanevar%20bush/)>
 3.  **All About Circuits.** *Introduction to Analog Computing and Operational Amplifiers.* Disponível em: <https://www.allaboutcircuits.com/textbook/semiconductors/chpt-8/analog-computer-circuits/>
 4.  **Wikipedia (Verificado).** *Analog Computer - History and Technical Details.* Disponível em: <https://en.wikipedia.org/wiki/Analog_computer>
 5.  **Nature Electronics.** *The resurgence of analog computing for machine learning.* (Artigo acadêmico sobre o renascimento moderno). Disponível em: <https://www.nature.com/articles/s41928-021-00668-1>
