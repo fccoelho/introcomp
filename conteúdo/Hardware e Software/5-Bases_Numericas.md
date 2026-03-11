@@ -1,6 +1,5 @@
 # Guia de Aula: Bases Numéricas na Computação para Ciência de Dados
 
-Este material foi estendido para fornecer uma compreensão mais profunda, conectar os conceitos à prática de Ciência de Dados e incluir exercícios práticos no terminal.
 
 ---
 
