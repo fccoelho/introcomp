@@ -11,6 +11,7 @@ O Linux é um sistema operacional seguro, pois possui um conjunto de ferramentas
 
 O Linux também é bastante personalizável, permitindo que o usuário personalize seu sistema de acordo com suas necessidades. Além disso, o Linux é open source, o que significa que usuários e desenvolvedores podem acessar o código-fonte do sistema para fazer alterações e melhorias. Isso significa que o Linux pode ser adaptado para cada usuário individualmente, permitindo-lhes criar um ambiente de trabalho particularmente personalizado.
 
+[Este vídeo](https://youtu.be/zPt_e9Cdk08?si=Q_Hxv9zZ7cuxxtJ3) conta a história do Linux, desde sua criação por Linus Torvalds até sua popularização e adoção em todo o mundo. O vídeo destaca a importância do Linux como um sistema operacional de código aberto e sua influência na indústria de tecnologia.
 ## O Movimento do Software Livre
 O Linux é um exemplo de um sistema operacional de código aberto, o que significa que seu código-fonte é disponibilizado para que qualquer pessoa possa acessá-lo, modificá-lo e distribuí-lo. Isso é parte de um movimento mais amplo conhecido como o movimento do software livre, que defende a liberdade dos usuários de software para executar, copiar, distribuir, estudar, modificar e melhorar o software. O movimento do software livre é baseado em quatro liberdades fundamentais:
 1. A liberdade de executar o programa como você deseja, para qualquer propósito.

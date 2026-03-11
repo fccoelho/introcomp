@@ -30,10 +30,10 @@ A base da computação analógica eletrônica (décadas de 1940-1960) residia no
     *   *Referência:* [Antikythera Mechanism Research Project](http://www.antikythera-mechanism.gr/)
 2.  **Régua de Cálculo (Século XVII - XX):** Instrumento portátil baseado em logaritmos que permitia multiplicação e divisão através do alinhamento de escalas deslizantes.
 3.  **Analisador Diferencial de Vannevar Bush (1931):** Um marco na engenharia. Era uma máquina mecânica (posteriormente eletromecânica) que usava discos e rodas para integrar equações diferenciais. Foi fundamental para tabelas de tiro e pesquisa balística.
-    *   *Referência:* [IEEE Annals of the History of Computing - Vannevar Bush](https://www.computerhistory.org/collections/catalog/102643676)
+    *   *Referência:* [IEEE Annals of the History of Computing - Vannevar Bush]([https://www.computerhistory.org/collections/catalog/102643676](https://www.computerhistory.org/collections/catalog/102680080/search/keyword:differential%20analyzer/))
 4.  **Computadores de Controle de Tiro (Segunda Guerra Mundial):** Dispositivos como o *Kerrison Predictor* e o *Norden Bombsight* usavam computação analógica para calcular trajetórias de bombas e projéteis considerando vento, velocidade e gravidade em tempo real.
 5.  **EAI TR-10 e TR-48 (Décadas de 1950-60):** Produzidos pela *Electronic Associates, Inc.*, foram os computadores analógicos eletrônicos padrão da indústria e universidades. Eram usados para simular reatores nucleares, sistemas aeroespaciais e processos químicos.
-    *   *Referência:* [Computer History Museum - Analog Computers](https://www.computerhistory.org/collections/analog-computers/)
+    *   *Referência:* [Computer History Museum - Analog Computers]([https://www.computerhistory.org/collections/analog-computers/](https://www.computerhistory.org/collections/catalog/search-catalog/search/keyword:Analog%20computers/))
 
 ### Declínio e Legado Tecnológico
 
@@ -54,7 +54,7 @@ Esses dispositivos foram fundamentais para compreender os princípios de computa
 ### Referências Bibliográficas e Links
 
 1.  **Computer History Museum.** *Collection: Analog Computers.* Disponível em: <https://www.computerhistory.org/collections/analog-computers/>
-2.  **IEEE Annals of the History of Computing.** *The Differential Analyzer: A Legacy of Vannevar Bush.* Disponível em: <https://www.computer.org/csdl/magazine/ah/1996/04/h4014/13rRUxgj9O1>
+2.  **IEEE Annals of the History of Computing.** *The Differential Analyzer: A Legacy of Vannevar Bush.* Disponível em: <[https://www.computer.org/csdl/magazine/ah/1996/04/h4014/13rRUxgj9O1](https://www.computerhistory.org/collections/catalog/102680080/search/keyword:vanevar%20bush/)>
 3.  **All About Circuits.** *Introduction to Analog Computing and Operational Amplifiers.* Disponível em: <https://www.allaboutcircuits.com/textbook/semiconductors/chpt-8/analog-computer-circuits/>
 4.  **Wikipedia (Verificado).** *Analog Computer - History and Technical Details.* Disponível em: <https://en.wikipedia.org/wiki/Analog_computer>
 5.  **Nature Electronics.** *The resurgence of analog computing for machine learning.* (Artigo acadêmico sobre o renascimento moderno). Disponível em: <https://www.nature.com/articles/s41928-021-00668-1>
