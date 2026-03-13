@@ -1,0 +1,21 @@
+INFO Iniciando servico de autenticacao
+INFO Carregando configuracoes do sistema
+WARN Arquivo de cache nao encontrado, criando novo
+INFO Conexao com banco de dados estabelecida
+ERROR Falha ao conectar com servico de email
+INFO Servidor web iniciado na porta 8080
+WARN Memoria disponivel baixa: 15% livre
+INFO Requisicao processada com sucesso: /api/usuarios
+ERROR Timeout ao acessar API externa
+INFO Backup diario iniciado
+INFO Usuario admin logado com sucesso
+WARN Tentativa de acesso a recurso protegido
+ERROR Erro de sintaxe SQL na query
+INFO Cache limpo com sucesso
+INFO Servico de notificacoes iniciado
+ERROR Falha ao escrever no arquivo de log secundario
+WARN CPU usage acima de 80%
+INFO Atualizacao de security patch aplicada
+INFO Requisicao processada: /api/vendas
+ERROR Conexao com Redis perdida
+INFO Sistema de monitoramento ativo
