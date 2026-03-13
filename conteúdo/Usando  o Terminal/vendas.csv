@@ -1,0 +1,21 @@
+id,cliente,produto,valor,data,regiao
+1,Ana Silva,Notebook Dell,3500.00,2024-01-15,Sudeste
+2,Carlos Santos,Mouse Logitech,150.00,2024-01-16,Sul
+3,Maria Oliveira,Teclado Mecanico,450.00,2024-01-17,Nordeste
+4,Joao Pereira,Monitor 27 polegadas,1200.00,2024-01-18,Sudeste
+5,Julia Costa,Headset Gamer,320.00,2024-01-19,Centro-Oeste
+6,Pedro Almeida,Smartphone Samsung,2500.00,2024-01-20,Sul
+7,Laura Ferreira,Cadeira Gamer,1800.00,2024-01-21,Sudeste
+8,Ricardo Lima,Webcam HD,280.00,2024-01-22,Norte
+9,Beatriz Souza,Tablet Apple,4500.00,2024-02-01,Sudeste
+10,Fernando Rocha,Cabo HDMI,50.00,2024-02-02,Nordeste
+11,Carolina Mendes,Impressora HP,950.00,2024-02-03,Sul
+12,Gustavo Barbosa,SSD 1TB,600.00,2024-02-04,Sudeste
+13,Natalia Cruz,Mousepad XL,120.00,2024-02-05,Centro-Oeste
+14,Marcelo Dias,Fonte ATX 750W,450.00,2024-02-06,Norte
+15,Amanda Torres,Microfone Condensador,780.00,2024-02-07,Sudeste
+16,Bruno Carvalho,Camera DSLR,5200.00,2024-02-08,Sul
+17,Patricia Gomes,Laptop Acer,2800.00,2024-02-09,Nordeste
+18,Thiago Ribeiro,Router WiFi 6,380.00,2024-02-10,Sudeste
+19,Vanessa Araujo,Kindle Paperwhite,650.00,2024-02-11,Centro-Oeste
+20,Renato Moreira,Smartwatch Garmin,1500.00,2024-02-12,Sudeste

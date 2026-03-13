@@ -1,0 +1,10 @@
+dados de vendas do primeiro trimestre
+analise de resultados com python
+Processamento de big data em R
+# comentario: linha de exemplo
+Dados estruturados para machine learning
+analise exploratoria com pandas
+Python e R sao linguagens populares
+introducao a ciencia de dados
+Analise de series temporais
+visualizacao de dados em python

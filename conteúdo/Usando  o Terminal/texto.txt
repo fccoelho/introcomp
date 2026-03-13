@@ -1,0 +1,26 @@
+# Arquivo de exemplo para exercicio de pipeline
+# Este arquivo contem comentarios e linhas vazias
+
+A ciencia de dados e uma area fascinante que combina estatistica e programacao.
+Os cientistas de dados utilizam diversas ferramentas para analisar informacoes.
+
+# Processamento de texto e importante
+
+A analise de dados permite descobrir padroes escondidos nas informacoes.
+Machine learning e inteligencia artificial sao campos relacionados.
+
+Python e uma linguagem muito utilizada para ciencia de dados.
+
+# Estatistica e fundamental
+
+A visualizacao de dados ajuda a comunicar resultados de forma clara.
+Bancos de dados armazenam grandes quantidades de informacoes.
+
+Big data representa o volume massivo de dados gerados diariamente.
+Os algoritmos de aprendizado de maquina sao poderosos.
+
+# Programacao e essencial
+
+A limpeza de dados e uma etapa crucial no processo de analise.
+Engineers de dados trabalham com pipelines de processamento.
+
