@@ -1,0 +1,10 @@
+Oct 10 13:55:00 server sshd[1234]: Failed password for invalid user admin from 192.168.1.15 port 22 ssh2
+Oct 10 13:56:00 server sshd[1235]: Accepted password for root from 10.0.0.5 port 22 ssh2
+Oct 10 13:57:00 server sudo: user1 : TTY=pts/0 ; PWD=/home/user1 ; USER=root ; COMMAND=/bin/bash
+Oct 10 13:58:00 server sshd[1236]: Failed password for root from 172.16.0.20 port 22 ssh2
+Oct 10 13:59:00 server sshd[1237]: Failed password for root from 172.16.0.20 port 22 ssh2
+Oct 10 14:00:00 server sudo: user2 : command not allowed ; TTY=pts/1 ; PWD=/home/user2 ; USER=root ; COMMAND=/usr/bin/rm -rf /
+Oct 10 14:01:00 server sshd[1238]: Accepted publickey for deploy from 192.168.1.10 port 22 ssh2
+Oct 10 14:02:00 server sshd[1239]: Failed password for invalid user test from 192.168.1.55 port 22 ssh2
+Oct 10 14:03:00 server sudo: user1 : TTY=pts/0 ; PWD=/home/user1 ; USER=root ; COMMAND=/usr/bin/vim /etc/passwd
+Oct 10 14:04:00 server sshd[1240]: Failed password for root from 172.16.0.20 port 22 ssh2
