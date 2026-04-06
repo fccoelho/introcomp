@@ -80,3 +80,7 @@ byobu
 
 O `byobu` permite que você abra vários terminais em uma única conexão SSH, o que pode ser muito útil para gerenciar vários processos em um servidor remoto. Para criar uma nov shell no `byobu`, basta digitar `F2`. Para alternar entre as janelas, basta digitar  `F3` e `F4`. Para sair do `byobu`, mantendo as sessões ativas, basta digitar`F6`. Ao reiniciar a conexão SSH, basta digitar o comando `byobu` para restaurar as sessões ativas.
 
+## Aprendendo mais
+Uma forma ludica de estudar SSH e o generenciamento remoto de servidores é atrasvés dos jogos em [overthewire.org](https://overthewire.org/wargames/). Comece pelo [bandit](https://overthewire.org/wargames/bandit/).
+
+Se você precisa de uma shell linux para praticar pode também usar o [Google cloud shell](https://shell.cloud.google.com).
