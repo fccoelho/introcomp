@@ -1,4 +1,4 @@
-Aqui está a explicação completa em português, mantendo o mesmo nível técnico e estrutura:
+## Como funciona o operador `~` em Python?
 
 ### 🔑 Resposta Rápida
 Em Python (e na maioria das linguagens modernas), o operador de negação bit a bit `~` segue esta regra matemática:
@@ -62,4 +62,4 @@ No sistema de Complemento de Dois, uma sequência infinita de `1`s à esquerda �
 | `x`      | `0000 0100 1101 0010`   | `1234`  |
 | `~x`     | `1111 1011 0010 1101`   | `-1235` |
 
-Esse comportamento é padrão em praticamente todas as linguagens que usam inteiros sinalizados no formato de Complemento de Dois. Se quiser ver como outros operadores (`&`, `|`, `^`, `<<`, `>>`) funcionam no mesmo nível, é só pedir!
+Esse comportamento é padrão em praticamente todas as linguagens que usam inteiros sinalizados no formato de Complemento de Dois. 
